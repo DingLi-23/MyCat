@@ -6,6 +6,8 @@ public class cat_move : MonoBehaviour
 {
     private Rigidbody2D rig = null;
     public float Force = 75.0f;
+
+    [Tooltip("用于设置主角水平速度")]
     public float Speed = 3.0f;
     private bool JetActive = false;
 
