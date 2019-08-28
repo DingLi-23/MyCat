@@ -6,6 +6,7 @@ public class cat_move : MonoBehaviour
 {
     private Rigidbody2D rig = null;
     public float Force = 75.0f;
+    public float JumpHeight = 0.5f;
 
     [Tooltip("用于设置主角水平速度")]
     public float Speed = 3.0f;
@@ -15,7 +16,6 @@ public class cat_move : MonoBehaviour
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
