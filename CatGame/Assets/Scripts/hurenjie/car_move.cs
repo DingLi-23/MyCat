@@ -4,32 +4,27 @@ using UnityEngine;
 
 public class car_move : MonoBehaviour
 {
-    private Rigidbody2D rig = null;
+    private Rigidbody2D car = null;
     public float Force = 75.0f;
-    public float JumpHeight = 0.5f;
 
-    [Tooltip("用于设置主角水平速度")]
+    [Tooltip("用于设置小车水平速度")]
     public float Speed = 3.0f;
-    private bool JetActive = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
+        car = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        JetActive = Input.GetButton("Fire1");
+
     }
 
     private void FixedUpdate()
     {
-        if (JetActive)
-        {
-            rig.AddForce(new Vector2(0, Force));
-        }
-        rig.velocity = new Vector2(Speed, rig.velocity.y);
+        car.velocity = new Vector2(Speed, car.velocity.y);
     }
 }
