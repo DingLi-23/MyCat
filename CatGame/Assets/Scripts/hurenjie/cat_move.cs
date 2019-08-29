@@ -5,11 +5,9 @@ using UnityEngine;
 public class cat_move : MonoBehaviour
 {
     private Rigidbody2D rig = null;
+    [Tooltip("用于设置主角跳跃施加的力度")]
     public float Force = 75.0f;
     public float JumpHeight = 0.5f;
-
-    [Tooltip("用于设置主角水平速度")]
-    public float Speed = 3.0f;
     private bool JetActive = false;
 
     // Start is called before the first frame update
@@ -30,6 +28,5 @@ public class cat_move : MonoBehaviour
         {
             rig.AddForce(new Vector2(0, Force));
         }
-        rig.velocity = new Vector2(Speed, rig.velocity.y);
     }
 }
