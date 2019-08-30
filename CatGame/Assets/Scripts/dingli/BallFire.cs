@@ -23,9 +23,11 @@ public class BallFire : MonoBehaviour
         if (ball.position.y <= -3 && moveToUp)
         {
             moveToUp  = false;
+
         }
         else if (ball.position.y >= 3 && !moveToUp)
             moveToUp = true;
+
         ball.position += (moveToUp ? Vector3.down : Vector3.up) * Time.deltaTime * speed;
     }
 }
