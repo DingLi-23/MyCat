@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3307605228470655377}
   - component: {fileID: 3307605228470655378}
   - component: {fileID: 3307605228470655379}
-  - component: {fileID: 5003332228615845054}
+  - component: {fileID: 8753724433978658420}
   m_Layer: 0
   m_Name: cat
   m_TagString: Untagged
@@ -206,7 +206,7 @@ PolygonCollider2D:
       - {x: -0.62, y: -0.98999995}
       - {x: -0.48, y: -0.90999997}
       - {x: -0.32, y: -0.97999996}
---- !u!114 &5003332228615845054
+--- !u!114 &8753724433978658420
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
