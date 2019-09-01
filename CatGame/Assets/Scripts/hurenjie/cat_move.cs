@@ -9,7 +9,9 @@ public class cat_move : MonoBehaviour
     public float Force = 75.0f;
     public float JumpHeight = 0.5f;
     private bool JetActive = false;
-    public AudioClip crystal1;
+    private bool CatDead = false;
+    public AudioClip crystal1;//收集砖石音频
+    public AudioClip catdead;//猫死亡音频
     private int count = 0;
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,12 @@ public class cat_move : MonoBehaviour
             Destroy(collision.gameObject);
             count++;
         }
-
+        if (collision.gameObject.CompareTag("Bat"))
+        {
+            CatDead = true;
+            collision.gameObject.GetComponent<AudioSource>().Play();
+            //缺少蝙蝠AI以及猫死亡动画
+            Debug.Log("cat is deaded");
+        }
     }
 }

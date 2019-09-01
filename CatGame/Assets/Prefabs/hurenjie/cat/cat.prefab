@@ -220,3 +220,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Force: 75
   JumpHeight: 0.5
+  crystal1: {fileID: 8300000, guid: 88d12cf7969261243bd79d680badf539, type: 3}
+  catdead: {fileID: 8300000, guid: 9d6408f6f9039ca43876fc22b8b9fe22, type: 3}
