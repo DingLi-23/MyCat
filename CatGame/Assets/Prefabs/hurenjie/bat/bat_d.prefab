@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3254317975252588312}
   - component: {fileID: 4810799282259766780}
   - component: {fileID: 18655523846775198}
+  - component: {fileID: 6822465421244485740}
   m_Layer: 0
   m_Name: bat_d
   m_TagString: Bat
@@ -261,3 +262,16 @@ PolygonCollider2D:
       - {x: 1.24, y: -0.31}
       - {x: 1.28, y: -0.22999999}
       - {x: 1.28, y: -0.06}
+--- !u!114 &6822465421244485740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6720787273484434096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc21e7ba9b99d944901e4e6de5436dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4

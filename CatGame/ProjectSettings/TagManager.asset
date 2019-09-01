@@ -8,6 +8,7 @@ TagManager:
   - Flame
   - GameMasonry
   - Bat
+  - CheckPoint
   layers:
   - Default
   - TransparentFX

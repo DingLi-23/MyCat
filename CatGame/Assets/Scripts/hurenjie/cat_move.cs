@@ -45,7 +45,6 @@ public class cat_move : MonoBehaviour
         if (collision.gameObject.CompareTag("Bat"))
         {
             CatDead = true;
-            collision.gameObject.GetComponent<AudioSource>().Play();
             AudioSource.PlayClipAtPoint(catdead, Camera.main.transform.position);
             //缺少蝙蝠AI以及猫死亡动画
             Debug.Log("cat is deaded");
