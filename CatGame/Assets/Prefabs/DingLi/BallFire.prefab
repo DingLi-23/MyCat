@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5511976077893808067}
   - component: {fileID: 1094051502127594238}
   - component: {fileID: 4666288499085505156}
-  - component: {fileID: 692297780}
+  - component: {fileID: 2057138756}
   m_Layer: 0
   m_Name: BallFire
   m_TagString: Untagged
@@ -92,13 +92,13 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092791626232640335}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
   m_Mass: 0.69397783
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.25
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -120,7 +120,7 @@ CircleCollider2D:
   m_Offset: {x: 0.02, y: 0}
   serializedVersion: 2
   m_Radius: 0.47
---- !u!114 &692297780
+--- !u!114 &2057138756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,11 +129,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1092791626232640335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66268ae996f5ce64fa9ccf3c00601f12, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b1c8dca4e3301d40b9059b9caa41ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  moveToUp: 1
+  speed: 4
+  angleSpeed: 0.01
+  target: {fileID: 0}
+  isRotate: 1
 --- !u!1 &6879332392572491461
 GameObject:
   m_ObjectHideFlags: 0

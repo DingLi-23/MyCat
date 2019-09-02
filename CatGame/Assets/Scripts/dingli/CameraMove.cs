@@ -1,0 +1,36 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameraMove : MonoBehaviour
+{
+    public Transform Cat;
+    public float StartTime;
+    public float EndTime;
+    private float time;
+    private float distanceX;
+    void Start()
+    {
+        distanceX = transform.position.x - Cat.position.x;
+    }
+
+    void Update()
+    {
+        transform.position = new Vector3(
+            Cat.position.x + distanceX,
+            transform.position.y,
+            transform.position.z);     
+    }
+    void FixedUpdate ()
+    {
+        time++;
+        if (this.GetComponent<Camera>().orthographicSize >= 2 && StartTime <= time && time <= EndTime)
+        {
+            this.GetComponent<Camera>().orthographicSize -= 0.1f;
+        }
+        else if (this.GetComponent<Camera>().orthographicSize <= 5 && time >= EndTime)
+        {
+            this.GetComponent<Camera>().orthographicSize += 0.1f;
+        } 
+    }
+}
