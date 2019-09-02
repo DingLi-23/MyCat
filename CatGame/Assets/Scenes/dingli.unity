@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 43089608}
   - component: {fileID: 43089607}
+  - component: {fileID: 43089609}
   - component: {fileID: 43089606}
   m_Layer: 0
   m_Name: Camera
@@ -194,7 +195,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1738485349
+--- !u!114 &43089609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43089605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 243bdde0b02c4454e838688febc945b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cat: {fileID: 1634353996}
+  StartTime: 200
+  EndTime: 400
+--- !u!4 &1634353996 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3307605228470655376, guid: a2192a6241bcdc941b18ca0e9fbd49b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2114211543}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2114211543
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -209,12 +231,12 @@ PrefabInstance:
     - target: {fileID: 3307605228470655376, guid: a2192a6241bcdc941b18ca0e9fbd49b0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.67
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 3307605228470655376, guid: a2192a6241bcdc941b18ca0e9fbd49b0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.84
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 3307605228470655376, guid: a2192a6241bcdc941b18ca0e9fbd49b0,
         type: 3}
@@ -259,6 +281,11 @@ PrefabInstance:
     - target: {fileID: 3307605228470655376, guid: a2192a6241bcdc941b18ca0e9fbd49b0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307605228470655378, guid: a2192a6241bcdc941b18ca0e9fbd49b0,
+        type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
