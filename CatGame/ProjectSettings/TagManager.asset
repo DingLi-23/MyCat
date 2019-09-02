@@ -6,6 +6,9 @@ TagManager:
   tags:
   - BounceWall
   - Flame
+  - GameMasonry
+  - Bat
+  - CheckPoint
   layers:
   - Default
   - TransparentFX

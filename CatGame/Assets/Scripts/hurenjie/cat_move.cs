@@ -9,7 +9,10 @@ public class cat_move : MonoBehaviour
     public float Force = 75.0f;
     public float JumpHeight = 0.5f;
     private bool JetActive = false;
-
+    private bool CatDead = false;
+    public AudioClip crystal1;//收集砖石音频
+    public AudioClip catdead;//猫死亡音频
+    private int count = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,24 @@ public class cat_move : MonoBehaviour
         if (JetActive)
         {
             rig.AddForce(new Vector2(0, Force));
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("GameMasonry"))
+        {
+            //播放吃金币音乐
+            AudioSource.PlayClipAtPoint(crystal1, Camera.main.transform.position);
+            Destroy(collision.gameObject);
+            count++;
+        }
+        if (collision.gameObject.CompareTag("Bat"))
+        {
+            CatDead = true;
+            AudioSource.PlayClipAtPoint(catdead, Camera.main.transform.position);
+            //缺少蝙蝠AI以及猫死亡动画
+            Debug.Log("cat is deaded");
         }
     }
 }
