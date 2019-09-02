@@ -6,9 +6,14 @@ public class cat_move : MonoBehaviour
 {
     private Rigidbody2D rig = null;
     [Tooltip("用于设置主角跳跃施加的力度")]
-    public float Force = 75.0f;
-    public float JumpHeight = 0.5f;
+    public float Force = 35.0f;
+    [Tooltip("猫跳跃高度限制")]
+    public float JumpHeight = 0.8f;
+    //是否能够跳跃
+    private bool canJump = true;
+    private float MaxHeightY;
     private bool JetActive = false;
+
     private bool CatDead = false;
     public AudioClip crystal1;//收集砖石音频
     public AudioClip catdead;//猫死亡音频
@@ -27,7 +32,11 @@ public class cat_move : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (JetActive)
+        if (transform.position.y >= MaxHeightY)
+        {
+            canJump = false;
+        }
+        if (JetActive && canJump)
         {
             rig.AddForce(new Vector2(0, Force));
         }
@@ -48,6 +57,15 @@ public class cat_move : MonoBehaviour
             AudioSource.PlayClipAtPoint(catdead, Camera.main.transform.position);
             //缺少蝙蝠AI以及猫死亡动画
             Debug.Log("cat is deaded");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (GameObject.FindGameObjectWithTag("car"))
+        {
+            MaxHeightY = transform.position.y + JumpHeight;
+            canJump = true;
         }
     }
 }
