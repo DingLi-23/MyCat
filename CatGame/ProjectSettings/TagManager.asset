@@ -9,6 +9,20 @@ TagManager:
   - GameMasonry
   - Bat
   - CheckPoint
+  - car
+  - cat
+  - button
+  - car
+  - cat
+  - button
+  - car
+  - cat
+  - button
+  - car
+  - cat
+  - button
+  - car
+  - inverter
   layers:
   - Default
   - TransparentFX

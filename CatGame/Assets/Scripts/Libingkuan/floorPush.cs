@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
-{
-    public Sprite PlaySprite;
-    public Sprite PauseSprite;
 
-    private bool paused = false;
-    public Button BtnPlayOrPause;
+public class floorPush : MonoBehaviour
+{
+    public int a = 0;
+    public Sprite red;
+    public Sprite green;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,16 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BtnPlayOrPause.image.sprite = !paused ? PauseSprite : PlaySprite;
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("cat"))
+        {
+            GetComponent<SpriteRenderer>().sprite = green;
+            a = 1;
+        }
     }
 }
+

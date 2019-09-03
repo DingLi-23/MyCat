@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1094051502127594238}
   - component: {fileID: 4666288499085505156}
   - component: {fileID: 2057138756}
+  - component: {fileID: 1917616138}
   m_Layer: 0
   m_Name: BallFire
   m_TagString: Untagged
@@ -136,6 +137,25 @@ MonoBehaviour:
   angleSpeed: 0.01
   target: {fileID: 0}
   isRotate: 1
+--- !u!95 &1917616138
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092791626232640335}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 891cbbd80f18c0244b8b9adceb1f98d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6879332392572491461
 GameObject:
   m_ObjectHideFlags: 0
