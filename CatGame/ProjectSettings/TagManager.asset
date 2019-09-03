@@ -22,6 +22,9 @@ TagManager:
   - cat
   - button
   - car
+  - cat
+  - button
+  - car
   - inverter
   layers:
   - Default
