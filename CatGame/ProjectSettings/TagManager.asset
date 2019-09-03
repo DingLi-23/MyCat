@@ -9,6 +9,8 @@ TagManager:
   - GameMasonry
   - Bat
   - CheckPoint
+  - cat
+  - button
   layers:
   - Default
   - TransparentFX

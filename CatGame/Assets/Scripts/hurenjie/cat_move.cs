@@ -49,5 +49,6 @@ public class cat_move : MonoBehaviour
             //缺少蝙蝠AI以及猫死亡动画
             Debug.Log("cat is deaded");
         }
+
     }
 }
