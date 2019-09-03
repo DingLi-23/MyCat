@@ -9,6 +9,7 @@ TagManager:
   - GameMasonry
   - Bat
   - CheckPoint
+  - car
   - cat
   - button
   layers:
