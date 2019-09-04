@@ -26,6 +26,7 @@ TagManager:
   - button
   - car
   - inverter
+  - catdead
   layers:
   - Default
   - TransparentFX
