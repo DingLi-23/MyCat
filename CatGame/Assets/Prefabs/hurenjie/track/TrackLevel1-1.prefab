@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3837491330813920639}
   - component: {fileID: 5023722314047131364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: edge3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5473139365372713837}
   - component: {fileID: 2685069904210696692}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: edge3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6362075256217611200}
   - component: {fileID: 3858390622125145289}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: track_edge1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7128287561090797097}
   - component: {fileID: 2142217022686616578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: edge3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7041213600177905070}
   - component: {fileID: 7041213600177905065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TrackLevel1-1
   m_TagString: track
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7041213600880795354}
   - component: {fileID: 7041213600880795355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HT1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7041213601655261740}
   - component: {fileID: 7041213601655261741}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HT1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3791684868693283944}
   - component: {fileID: 7877073376205382454}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: edge3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1354369526921965126}
   - component: {fileID: 5694707977160218081}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: track_edge2
   m_TagString: track_edge2
   m_Icon: {fileID: 0}
@@ -666,6 +666,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: strone2
       objectReference: {fileID: 0}
+    - target: {fileID: 5038682058280742203, guid: 564256e4be103b145b074e7b2a63e948,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4047150062107010823, guid: 564256e4be103b145b074e7b2a63e948,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -720,6 +725,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848756322362824559, guid: 564256e4be103b145b074e7b2a63e948,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999174476435204937, guid: 564256e4be103b145b074e7b2a63e948,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669273103223700930, guid: 564256e4be103b145b074e7b2a63e948,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 564256e4be103b145b074e7b2a63e948, type: 3}

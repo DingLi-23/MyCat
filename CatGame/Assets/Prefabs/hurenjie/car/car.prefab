@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5912418176900369455}
   - component: {fileID: 8504095189649223201}
   - component: {fileID: 1514663928}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: car
   m_TagString: car
   m_Icon: {fileID: 0}
@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 3
+  catCloseCar: 0
 --- !u!95 &1514663928
 Animator:
   serializedVersion: 3
@@ -176,6 +177,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: wheel_back
       objectReference: {fileID: 0}
+    - target: {fileID: 8171548413782191893, guid: fc583d2a8596ec44599bdda91854549d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8171548413782191894, guid: fc583d2a8596ec44599bdda91854549d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -245,6 +251,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -0.24999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8171548413606268331, guid: fc583d2a8596ec44599bdda91854549d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8171548413725284067, guid: fc583d2a8596ec44599bdda91854549d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8171548414170016489, guid: fc583d2a8596ec44599bdda91854549d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc583d2a8596ec44599bdda91854549d, type: 3}
@@ -266,6 +287,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: wheel_font
       objectReference: {fileID: 0}
+    - target: {fileID: 6717366096140610382, guid: 3567a59da2f7d77459a470eca997376c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6717366096140610381, guid: 3567a59da2f7d77459a470eca997376c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -335,6 +361,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -0.24999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717366096082160112, guid: 3567a59da2f7d77459a470eca997376c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717366096226341560, guid: 3567a59da2f7d77459a470eca997376c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717366096586927794, guid: 3567a59da2f7d77459a470eca997376c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3567a59da2f7d77459a470eca997376c, type: 3}

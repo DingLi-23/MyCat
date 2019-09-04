@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7917944761163570388}
   - component: {fileID: 3739972744602831424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: track_edge1
   m_TagString: track_edge1
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7184816749071080388}
   - component: {fileID: 1204981178534955754}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HT1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2938967045159156111}
   - component: {fileID: 7497411113583338688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TrackLevel3
   m_TagString: track
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5009507036386506256}
   - component: {fileID: 8322371962567249573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HT1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6276580402703675178}
   - component: {fileID: 76805979882487074}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: track_edge2
   m_TagString: track_edge2
   m_Icon: {fileID: 0}

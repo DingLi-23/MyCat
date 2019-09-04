@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3067954022509781052}
   - component: {fileID: 4799187342298374488}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: track_edge1
   m_TagString: track_edge1
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3010488907813578582}
   - component: {fileID: 6426985683294809293}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: edge3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6301269251613931844}
   - component: {fileID: 4162924077765852125}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: edge3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9109135503618370560}
   - component: {fileID: 89028241183129131}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: edge3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3641924064476291875}
   - component: {fileID: 4990547466763877839}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: track_edge1 (1)
   m_TagString: track_edge2
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2889095384932202049}
   - component: {fileID: 8202771528700248351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: edge3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9021149618527125383}
   - component: {fileID: 9021149618527125376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TrackLevel2
   m_TagString: track
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9021149618889784563}
   - component: {fileID: 9021149618889784562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HT1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9021149619735422981}
   - component: {fileID: 9021149619735422980}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HT1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
