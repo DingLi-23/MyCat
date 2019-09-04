@@ -12,6 +12,7 @@ TagManager:
   - car
   - cat
   - button
+  - catdead
   layers:
   - Default
   - TransparentFX

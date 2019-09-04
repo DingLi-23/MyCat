@@ -18,7 +18,6 @@ public class Gate_move : MonoBehaviour
         if(red.GetComponent<floorPush>().a == 1)
         {
             GetComponent<Animator>().enabled = true;
-            Debug.Log(c);
         }
     }
 
