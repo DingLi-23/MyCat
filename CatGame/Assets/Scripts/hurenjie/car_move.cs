@@ -33,5 +33,9 @@ public class car_move : MonoBehaviour
            // Cat.eulerAngles = new Vector3(0, 180, 0);
             Speed = -Speed;
         }
+        if (GameObject.FindGameObjectWithTag("car"))
+        {
+            
+        }
     }
 }
