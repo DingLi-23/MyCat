@@ -41,10 +41,11 @@ public class car_move : MonoBehaviour
 
             Speed = -Speed;
         }
-        if (collision.gameObject.CompareTag("track_edge1") && GameObject.FindGameObjectWithTag("track_edge2"))
+        if (collision.gameObject.CompareTag("track_edge1"))
         {
+            Debug.Log("YESS");
             transform.GetComponent<Collider>().enabled = false;
         }
     }
     
-    }
+}
