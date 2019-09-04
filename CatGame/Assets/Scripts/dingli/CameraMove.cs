@@ -9,16 +9,18 @@ public class CameraMove : MonoBehaviour
     public float EndTime;
     private float time;
     private float distanceX;
+    private float distanceY;
     void Start()
     {
         distanceX = transform.position.x - Cat.position.x;
+        distanceY = transform.position.y - Cat.position.y;
     }
 
     void Update()
     {
         transform.position = new Vector3(
             Cat.position.x + distanceX,
-            transform.position.y,
+            Cat.position.y + distanceY,
             transform.position.z);     
     }
     void FixedUpdate ()
