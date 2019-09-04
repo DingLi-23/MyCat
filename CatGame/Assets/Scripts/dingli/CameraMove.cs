@@ -28,11 +28,11 @@ public class CameraMove : MonoBehaviour
         time++;
         if (this.GetComponent<Camera>().orthographicSize >= 2 && StartTime <= time && time <= EndTime)
         {
-            this.GetComponent<Camera>().orthographicSize -= 0.1f;
+            this.GetComponent<Camera>().orthographicSize -= 0.04f;
         }
         else if (this.GetComponent<Camera>().orthographicSize <= 5 && time >= EndTime)
         {
-            this.GetComponent<Camera>().orthographicSize += 0.1f;
+            this.GetComponent<Camera>().orthographicSize += 0.04f;
         } 
     }
 }
