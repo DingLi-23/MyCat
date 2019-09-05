@@ -33,7 +33,6 @@ public class car_move : MonoBehaviour
         if (collision.gameObject.CompareTag("cat"))
         {
             catCloseCar = true;
-
         }
         if (GameObject.FindGameObjectWithTag("inverter"))
         {
