@@ -5,7 +5,6 @@ using UnityEngine;
 public class Gate_move : MonoBehaviour
 {
     public Sprite SluiceGate;
-    public float speed = 10;
     public GameObject red;
     // Start is called before the first frame update
     void Start()

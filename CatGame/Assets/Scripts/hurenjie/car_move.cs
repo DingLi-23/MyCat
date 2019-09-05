@@ -5,34 +5,58 @@ using UnityEngine;
 public class car_move : MonoBehaviour
 {
     private Rigidbody2D car = null;
- 
     [Tooltip("用于设置小车水平速度")]
     public float Speed = 3.0f;
 
+    public bool catCloseCar = false;
+
     void Start()
     {
-        car = GetComponent<Rigidbody2D>();    
+        car = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-          
+
+    }
+    private void FixedUpdate()
+    {
+        if (catCloseCar == true)
+        {
+            car.velocity = new Vector2(Speed, car.velocity.y);
+        }
     }
 
-    private void FixedUpdate()
-    {   
-           car.velocity = new Vector2(Speed, car.velocity.y);
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("cat"))
+        {
+            catCloseCar = true;
+
+        }
         if (GameObject.FindGameObjectWithTag("inverter"))
-        {          
+        {
+            {
+                Speed = -Speed;
+            }
+            if (collision.gameObject.CompareTag("track_edge1"))
+            {
+                Debug.Log("YESS");
+                transform.GetComponent<Collider>().enabled = false;
+
+            }
+        }
+        if (GameObject.FindGameObjectWithTag("inverter"))
+        {
+
             Speed = -Speed;
         }
-        if (GameObject.FindGameObjectWithTag("car"))
+        if (collision.gameObject.CompareTag("track_edge1"))
         {
-            
+            Debug.Log("YESS");
+            transform.GetComponent<Collider>().enabled = false;
         }
     }
+    
 }
