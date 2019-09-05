@@ -32,6 +32,7 @@ TagManager:
   - track_edge1
   - track_edge2
   - track
+  - batdead
   layers:
   - Default
   - TransparentFX
