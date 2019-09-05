@@ -9,8 +9,7 @@ public class floorPush : MonoBehaviour
     public int a = 0;
     public Sprite red;
     public Sprite green;
-    public GameObject FireOff;
-    public 
+    public GameObject FireOff; 
     public enum Switchcontrol
     {
         FireOff,

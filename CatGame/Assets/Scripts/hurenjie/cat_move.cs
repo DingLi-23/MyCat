@@ -19,6 +19,8 @@ public class cat_move : MonoBehaviour
     public AudioClip catdead;//猫死亡音频
     private int count = 0;
     // Start is called before the first frame update
+
+
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
