@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 287964372782273255}
   - component: {fileID: 2645342110226379257}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: edge3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8999421902308424960}
   - component: {fileID: 1146506616041221166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HT1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2281251673041736682}
   - component: {fileID: 1833334842335531230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: edge3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,6 +237,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5074468470815821400
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787768665606637527}
+  - component: {fileID: 4130957013426226616}
+  m_Layer: 8
+  m_Name: track_edge2
+  m_TagString: track_edge2
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1787768665606637527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5074468470815821400}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.44, y: -0.39, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4006102205069549387}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4130957013426226616
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5074468470815821400}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.17, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &5234686152235319167
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3863927642153704176}
   - component: {fileID: 1198570354171448507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: edge3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4386327796082062372}
   - component: {fileID: 7879847604214652424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: edge3 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,6 +452,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &8133843818201503525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7118127925894765020}
+  - component: {fileID: 7945511566001683388}
+  m_Layer: 8
+  m_Name: track_edge1
+  m_TagString: track_edge1
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7118127925894765020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8133843818201503525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.48, y: -0.39, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4006102205069549387}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7945511566001683388
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8133843818201503525}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.17, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &8522377148901647429
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6545030248901972180}
   - component: {fileID: 7795387336038279265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HT1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,9 +598,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4006102205069549387}
   - component: {fileID: 5522810619628274327}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TrackLevel3~1
-  m_TagString: Untagged
+  m_TagString: track
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -508,6 +622,8 @@ Transform:
   - {fileID: 287964372782273255}
   - {fileID: 3863927642153704176}
   - {fileID: 4386327796082062372}
+  - {fileID: 7118127925894765020}
+  - {fileID: 1787768665606637527}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

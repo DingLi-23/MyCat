@@ -27,6 +27,11 @@ TagManager:
   - car
   - inverter
   - catdead
+  - car_edge1
+  - car_edge2
+  - track_edge1
+  - track_edge2
+  - track
   layers:
   - Default
   - TransparentFX
