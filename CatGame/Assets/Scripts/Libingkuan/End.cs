@@ -20,8 +20,8 @@ public class End : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("cat"))
         { 
-            GetComponent<AudioSource>().enabled = true;
-            MainCamera.GetComponent<Camera>().orthographicSize = 3;
+            GetComponent<AudioSource>().enabled = true;//声音开关选项
+            MainCamera.GetComponent<Camera>().orthographicSize = 3;//摄像头缩放
             Debug.Log("3");
         }
     }
