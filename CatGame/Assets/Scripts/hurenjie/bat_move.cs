@@ -8,26 +8,39 @@ public class bat_move : MonoBehaviour
     private Rigidbody2D rig;
     [Tooltip("蝙蝠飞行速度")]
     public float speed = 4.0f;
+    public GameObject Edge;
+    public bool edge ;
     // Start is called before the first frame update
+
+    
     void Start()
     {
-        bat_trans = GetComponent<Transform>();
+        //bat_trans = GetComponent<Transform>();
         rig = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
+        edge = Edge.GetComponent<bat_edge>().move;
+        if (edge==true)
+        {
+            Move();
+        }
+        
     }
     private void Move()
     {
-        //使用键盘控制蝙蝠移动
-        //float h = Input.GetAxis("Horizontal");
-        //float v = Input.GetAxis("Vertical");
-        //Vector3 dir = new Vector3(h, 0, v);
-        //rig.MovePosition(bat_trans.position + dir * 0.2f);
         rig.transform.Translate(Vector2.left * speed * Time.deltaTime, Space.Self);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+    }
+
+    private void FixedUpdate()
+    {
+
     }
 
 }

@@ -18,13 +18,15 @@ public class cat_move : MonoBehaviour
     public AudioClip crystal1;//收集砖石音频
     public AudioClip catdead;//猫死亡音频
     private int count = 0;
-    // Start is called before the first frame update
+
+
+    public BounceWall bounceWall;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+       
     }
 
-    // Update is called once per frame
     void Update()
     {
         JetActive = Input.GetButton("Fire1");
@@ -68,5 +70,10 @@ public class cat_move : MonoBehaviour
             MaxHeightY = transform.position.y + JumpHeight;
             canJump = true;
         }
+         if (collision.gameObject.CompareTag("BounceWall"))
+        {
+            bounceWall.ReverseMove();
+        }
+
     }
 }

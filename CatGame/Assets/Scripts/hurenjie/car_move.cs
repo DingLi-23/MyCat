@@ -5,8 +5,6 @@ using UnityEngine;
 public class car_move : MonoBehaviour
 {
     private Rigidbody2D car = null;
-
-
     [Tooltip("用于设置小车水平速度")]
     public float Speed = 3.0f;
 
@@ -35,6 +33,18 @@ public class car_move : MonoBehaviour
         if (collision.gameObject.CompareTag("cat"))
         {
             catCloseCar = true;
+        }
+        if (GameObject.FindGameObjectWithTag("inverter"))
+        {
+            {
+                Speed = -Speed;
+            }
+            if (collision.gameObject.CompareTag("track_edge1"))
+            {
+                Debug.Log("YESS");
+                transform.GetComponent<Collider>().enabled = false;
+
+            }
         }
         if (GameObject.FindGameObjectWithTag("inverter"))
         {
