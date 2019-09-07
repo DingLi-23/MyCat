@@ -33,6 +33,7 @@ TagManager:
   - track_edge2
   - track
   - batdead
+  - carCheck
   layers:
   - Default
   - TransparentFX
@@ -42,10 +43,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - track
+  - car
+  - cat
+  - bat
   - 
   - 
   - 

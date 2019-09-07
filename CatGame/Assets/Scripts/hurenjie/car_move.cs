@@ -10,6 +10,13 @@ public class car_move : MonoBehaviour
 
     public bool catCloseCar = false;
 
+    //判断小车前轮是否到达轨道边缘
+    public GameObject B;
+    public bool BW;
+
+    //后轮
+    public GameObject A;
+    public bool AW;
     void Start()
     {
         car = GetComponent<Rigidbody2D>();
@@ -17,7 +24,16 @@ public class car_move : MonoBehaviour
 
     void Update()
     {
-
+        BW = B.GetComponent<A>().B;
+        AW = A.GetComponent<B>().A;
+        if (BW == true)
+        {
+            transform.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        if (AW == true)
+        {
+            transform.GetComponent<BoxCollider2D>().enabled = false;
+        }
     }
     private void FixedUpdate()
     {
@@ -39,13 +55,13 @@ public class car_move : MonoBehaviour
             {
                 Speed = -Speed ;
             }
-            if (collision.gameObject.CompareTag("track_edge1"))
-            {
-                Debug.Log("YESS");
-                transform.GetComponent<Collider>().enabled = false;
+            //if (collision.gameObject.CompareTag("track_edge1"))
+            //{
+            //    transform.GetComponent<Collider>().enabled = false;
 
-            }
+            //}
         }
     }
-    
+
+
 }

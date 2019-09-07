@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5912418176900369455}
   - component: {fileID: 8504095189649223201}
   - component: {fileID: 1514663928}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: car
   m_TagString: car
   m_Icon: {fileID: 0}
@@ -146,6 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 3
   catCloseCar: 0
+  B: {fileID: 8368013311734680400}
+  BW: 0
 --- !u!95 &1514663928
 Animator:
   serializedVersion: 3
@@ -165,6 +167,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8769957850220567024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368013311734680400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a149aa3cc7c8cd4086c217a1df206b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  B: 0
 --- !u!1001 &380004660427842629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180,7 +195,7 @@ PrefabInstance:
     - target: {fileID: 8171548413782191893, guid: fc583d2a8596ec44599bdda91854549d,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8171548413782191894, guid: fc583d2a8596ec44599bdda91854549d,
         type: 3}
@@ -245,12 +260,12 @@ PrefabInstance:
     - target: {fileID: 8171548414170016489, guid: fc583d2a8596ec44599bdda91854549d,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8171548413606268331, guid: fc583d2a8596ec44599bdda91854549d,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8171548413782192360, guid: fc583d2a8596ec44599bdda91854549d,
         type: 3}
@@ -265,10 +280,16 @@ PrefabInstance:
     - target: {fileID: 8171548413725284067, guid: fc583d2a8596ec44599bdda91854549d,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc583d2a8596ec44599bdda91854549d, type: 3}
+--- !u!1 &8368013311734680400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8171548413782191893, guid: fc583d2a8596ec44599bdda91854549d,
+    type: 3}
+  m_PrefabInstance: {fileID: 380004660427842629}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8368013311734680403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8171548413782191894, guid: fc583d2a8596ec44599bdda91854549d,
@@ -290,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 6717366096140610382, guid: 3567a59da2f7d77459a470eca997376c,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6717366096140610381, guid: 3567a59da2f7d77459a470eca997376c,
         type: 3}
@@ -350,7 +371,7 @@ PrefabInstance:
     - target: {fileID: 6717366096082160112, guid: 3567a59da2f7d77459a470eca997376c,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6717366096140612787, guid: 3567a59da2f7d77459a470eca997376c,
         type: 3}
@@ -370,12 +391,12 @@ PrefabInstance:
     - target: {fileID: 6717366096226341560, guid: 3567a59da2f7d77459a470eca997376c,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6717366096586927794, guid: 3567a59da2f7d77459a470eca997376c,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3567a59da2f7d77459a470eca997376c, type: 3}
