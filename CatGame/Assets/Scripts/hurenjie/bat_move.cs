@@ -11,7 +11,7 @@ public class bat_move : MonoBehaviour
     public GameObject Edge;
     public bool edge ;
 
-
+    private Vector3 mycat;
     // Start is called before the first frame update
 
     
@@ -19,6 +19,7 @@ public class bat_move : MonoBehaviour
     {
         //bat_trans = GetComponent<Transform>();
         rig = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -27,13 +28,17 @@ public class bat_move : MonoBehaviour
         edge = Edge.GetComponent<bat_edge>().move;
         if (edge==true)
         {
-            Move();
+            mycat = GameObject.FindGameObjectWithTag("cat").GetComponent<Transform>().position;
+            //rig.transform.Translate(mycat * speed * Time.deltaTime, Space.Self);
+            //Vector3 current = new Vector3(transform.position.x, 0, 0);
+            transform.position = Vector3.MoveTowards(transform.position, mycat, 0.5f);
+            //Move();
         }
         
     }
     private void Move()
     {
-        rig.transform.Translate(Vector2.left * speed * Time.deltaTime, Space.Self);
+        //rig.transform.Translate(Vector2.left * speed * Time.deltaTime, Space.Self);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
