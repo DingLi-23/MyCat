@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
+    public GameObject Keyingwave;
     private Transform m_Transform;
     private Transform cat_Transform;
 
@@ -21,6 +22,10 @@ public class CameraMove : MonoBehaviour
     void Update()
     {
         m_Transform.position = cat_Transform.position + new Vector3(2,0,-10);
+        if (Input.GetButton("Fire1"))
+        {
+            createKW();
+        }
     }
     void FixedUpdate ()
     {
@@ -33,5 +38,15 @@ public class CameraMove : MonoBehaviour
         {
             this.GetComponent<Camera>().orthographicSize += 0.04f;
         } 
+    }
+    private void createKW()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            Vector3 mp = Input.mousePosition;
+            Vector3 keyW = Camera.main.ScreenToWorldPoint(mp);
+            Vector3 newW = new Vector3(keyW.x, keyW.y, 0);
+            GameObject KW = Instantiate(Keyingwave, newW, Quaternion.identity);
+        }
     }
 }
