@@ -219,8 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39e374fa0a71cb14e88181e228fc56cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Force: 75
-  JumpHeight: 0.5
+  Force: 35
+  JumpHeight: 0.8
   crystal1: {fileID: 8300000, guid: 88d12cf7969261243bd79d680badf539, type: 3}
   catdead: {fileID: 8300000, guid: 9d6408f6f9039ca43876fc22b8b9fe22, type: 3}
   bounceWall: {fileID: 0}
