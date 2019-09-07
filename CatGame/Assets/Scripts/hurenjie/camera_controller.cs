@@ -8,7 +8,7 @@ public class camera_controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Destroy(KW, 3.0f);
+
     }
 
     // Update is called once per frame

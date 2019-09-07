@@ -22,10 +22,7 @@ public class CameraMove : MonoBehaviour
     void Update()
     {
         m_Transform.position = cat_Transform.position + new Vector3(2,0,-10);
-        if (Input.GetButton("Fire1"))
-        {
-            createKW();
-        }
+        createKW();
     }
     void FixedUpdate ()
     {
@@ -41,7 +38,7 @@ public class CameraMove : MonoBehaviour
     }
     private void createKW()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             Vector3 mp = Input.mousePosition;
             Vector3 keyW = Camera.main.ScreenToWorldPoint(mp);
