@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class bat_move : MonoBehaviour
 {
-    private Transform bat_trans;
+    //private Transform bat_trans;
     private Rigidbody2D rig;
     [Tooltip("蝙蝠飞行速度")]
     public float speed = 4.0f;
     public GameObject Edge;
     public bool edge ;
+
+
     // Start is called before the first frame update
 
     

@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3307605228470655380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.48, y: 1.07, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 7745772366252994372}
   m_Father: {fileID: 0}
@@ -223,6 +223,7 @@ MonoBehaviour:
   JumpHeight: 0.5
   crystal1: {fileID: 8300000, guid: 88d12cf7969261243bd79d680badf539, type: 3}
   catdead: {fileID: 8300000, guid: 9d6408f6f9039ca43876fc22b8b9fe22, type: 3}
+  bounceWall: {fileID: 0}
 --- !u!1 &6115305916485571200
 GameObject:
   m_ObjectHideFlags: 0

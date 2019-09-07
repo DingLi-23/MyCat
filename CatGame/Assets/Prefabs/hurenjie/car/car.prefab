@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5912418176900369451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.005, y: -0.229, z: 0.0056533795}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 8368013311734680403}
   - {fileID: 7171671831343864672}
@@ -237,6 +237,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8171548414170016489, guid: fc583d2a8596ec44599bdda91854549d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8171548413606268331, guid: fc583d2a8596ec44599bdda91854549d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8171548413782192360, guid: fc583d2a8596ec44599bdda91854549d,
         type: 3}
       propertyPath: m_ConnectedRigidBody
@@ -244,25 +254,10 @@ PrefabInstance:
       objectReference: {fileID: 5912418176900369455}
     - target: {fileID: 8171548413782192360, guid: fc583d2a8596ec44599bdda91854549d,
         type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 8171548413782192360, guid: fc583d2a8596ec44599bdda91854549d,
-        type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -0.24999999
       objectReference: {fileID: 0}
-    - target: {fileID: 8171548413606268331, guid: fc583d2a8596ec44599bdda91854549d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8171548413725284067, guid: fc583d2a8596ec44599bdda91854549d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8171548414170016489, guid: fc583d2a8596ec44599bdda91854549d,
         type: 3}
       propertyPath: m_Layer
       value: 10
@@ -347,6 +342,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6717366096082160112, guid: 3567a59da2f7d77459a470eca997376c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6717366096140612787, guid: 3567a59da2f7d77459a470eca997376c,
         type: 3}
       propertyPath: m_ConnectedRigidBody
@@ -361,11 +361,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -0.24999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 6717366096082160112, guid: 3567a59da2f7d77459a470eca997376c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6717366096226341560, guid: 3567a59da2f7d77459a470eca997376c,
         type: 3}
