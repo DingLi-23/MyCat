@@ -37,7 +37,7 @@ public class car_move : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("inverter"))
         {
             {
-                Speed = -Speed;
+                Speed = -Speed ;
             }
             if (collision.gameObject.CompareTag("track_edge1"))
             {
@@ -45,16 +45,6 @@ public class car_move : MonoBehaviour
                 transform.GetComponent<Collider>().enabled = false;
 
             }
-        }
-        if (GameObject.FindGameObjectWithTag("inverter"))
-        {
-
-            Speed = -Speed;
-        }
-        if (collision.gameObject.CompareTag("track_edge1"))
-        {
-            Debug.Log("YESS");
-            transform.GetComponent<Collider>().enabled = false;
         }
     }
     
