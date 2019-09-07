@@ -63,8 +63,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2af1c2df2bacda241b0198097dd810cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SluiceGate: {fileID: 21300000, guid: 12e61f68b1a1529459055663cee40f90, type: 3}
-  speed: 10
+  SluiceGate: {fileID: 5241339292686114240}
   red: {fileID: 6648725747311284194}
 --- !u!1 &6648725747311284194
 GameObject:
@@ -284,6 +283,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac9fdc9781e8cd0498d1346da83db5ff, type: 3}
+--- !u!1 &5241339292686114240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1511519001477582792, guid: ac9fdc9781e8cd0498d1346da83db5ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 6648725746842423816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4551697095482109640 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7165196991380208832, guid: ac9fdc9781e8cd0498d1346da83db5ff,

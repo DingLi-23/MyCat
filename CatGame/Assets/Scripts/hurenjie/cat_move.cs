@@ -19,6 +19,7 @@ public class cat_move : MonoBehaviour
     public AudioClip catdead;//猫死亡音频
     private int count = 0;
 
+
     public BounceWall bounceWall;
     void Start()
     {

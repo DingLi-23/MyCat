@@ -8,18 +8,22 @@ public class bat_move : MonoBehaviour
     private Rigidbody2D rig;
     [Tooltip("蝙蝠飞行速度")]
     public float speed = 4.0f;
-    private bool CanMove = false;
+    public GameObject Edge;
+    public bool edge ;
     // Start is called before the first frame update
+
+    
     void Start()
     {
-        bat_trans = GetComponent<Transform>();
+        //bat_trans = GetComponent<Transform>();
         rig = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (CanMove == true)
+        edge = Edge.GetComponent<bat_edge>().move;
+        if (edge==true)
         {
             Move();
         }
@@ -31,10 +35,12 @@ public class bat_move : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("cat"))
-        {
-            CanMove = true;
-        }
+
+    }
+
+    private void FixedUpdate()
+    {
+
     }
 
 }
