@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class CameraMove : MonoBehaviour
 {
-    public Transform Cat;
+    private Transform m_Transform;
+    private Transform cat_Transform;
+
     public float StartTime;
     public float EndTime;
     private float time;
-    private float distanceX;
-    private float distanceY;
+
     void Start()
     {
-        distanceX = transform.position.x - Cat.position.x;
-        distanceY = transform.position.y - Cat.position.y;
+        m_Transform = gameObject.GetComponent<Transform>();
+        cat_Transform = GameObject.FindGameObjectWithTag("cat").GetComponent<Transform>();
+
     }
 
     void Update()
     {
-        transform.position = new Vector3(
-            Cat.position.x + distanceX,
-            Cat.position.y + distanceY,
-            transform.position.z);     
+        m_Transform.position = cat_Transform.position + new Vector3(2,0,-10);
     }
     void FixedUpdate ()
     {

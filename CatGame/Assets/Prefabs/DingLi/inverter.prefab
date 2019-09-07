@@ -168,9 +168,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7902319327503407954}
   - component: {fileID: 701853012}
+  - component: {fileID: 1601327667}
   m_Layer: 0
   m_Name: inverter
-  m_TagString: Untagged
+  m_TagString: inverter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -217,3 +218,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.83, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1601327667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5388223664817542713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eab0a4e3e78f5af44be56fb9a158beb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

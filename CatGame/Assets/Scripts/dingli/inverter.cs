@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class inverter : MonoBehaviour
 {
-    private Transform Cat;
+    private Transform cat_Transform;
 
     void Start()
     {
-        Cat = GameObject.Find("cat").GetComponent<Transform>(); 
+        cat_Transform = GameObject.FindGameObjectWithTag("cat").GetComponent<Transform>(); 
     }
 
     void Update()
@@ -19,7 +19,7 @@ public class inverter : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("car"))
         {
-            Cat.eulerAngles = new Vector3(0, 180, 0);
+            cat_Transform.eulerAngles = new Vector3(0, 180, 0);
         }
     }
 }
