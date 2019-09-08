@@ -10,35 +10,41 @@ public class bat_move : MonoBehaviour
     public float speed = 4.0f;
     public GameObject Edge;
     public bool edge ;
+    public float distance = 2.0f;
 
     private Vector3 mycat;
     // Start is called before the first frame update
+
+    private Transform cat;
 
     
     void Start()
     {
         //bat_trans = GetComponent<Transform>();
         rig = GetComponent<Rigidbody2D>();
-        
+        cat = GameObject.FindGameObjectWithTag("cat").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
         edge = Edge.GetComponent<bat_edge>().move;
-        if (edge==true)
+        if (edge == true && transform.position.x - cat.position.x >= distance)
         {
             mycat = GameObject.FindGameObjectWithTag("cat").GetComponent<Transform>().position;
             //rig.transform.Translate(mycat * speed * Time.deltaTime, Space.Self);
             //Vector3 current = new Vector3(transform.position.x, 0, 0);
-            transform.position = Vector3.MoveTowards(transform.position, mycat, 0.5f);
+            transform.position = Vector3.MoveTowards(transform.position, mycat, 0.1f);
             //Move();
         }
-        
+        else
+        {
+            Move();
+        }
     }
     private void Move()
     {
-        //rig.transform.Translate(Vector2.left * speed * Time.deltaTime, Space.Self);
+        rig.transform.Translate(Vector2.left * speed * Time.deltaTime, Space.Self);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

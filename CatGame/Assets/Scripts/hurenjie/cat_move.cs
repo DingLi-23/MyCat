@@ -19,12 +19,14 @@ public class cat_move : MonoBehaviour
     public AudioClip catdead;//猫死亡音频
     private int count = 0;
 
+    public bool bat_dead = false;
+
 
     public BounceWall bounceWall;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-       
+
     }
 
     void Update()
