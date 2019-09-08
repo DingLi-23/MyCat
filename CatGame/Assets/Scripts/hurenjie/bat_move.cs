@@ -36,11 +36,15 @@ public class bat_move : MonoBehaviour
             //rig.transform.Translate(mycat * speed * Time.deltaTime, Space.Self);
             //Vector3 current = new Vector3(transform.position.x, 0, 0);
             transform.position = Vector3.MoveTowards(transform.position, mycat, 0.1f);
-            //Move();
+            //if (transform.position.x - cat.position.x >= distance)
+            //{
+            //    Move();
+            //}
         }
-        else
+        else if(edge == true && transform.position.x - cat.position.x < distance)
         {
             Move();
+            Destroy(gameObject, 1.0f);
         }
     }
     private void Move()
