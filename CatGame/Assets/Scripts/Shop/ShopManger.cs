@@ -42,7 +42,7 @@ public class ShopManger : MonoBehaviour
 
         for (int i = 0; i < shopData.shopState.Count; i++)
         {
-            Debug.Log(shopData.shopList[i]);
+            Debug.Log(shopData.shopState[i]);
         }
 
         ui_ShopItem = Resources.Load<GameObject>("UI/ShopItem");

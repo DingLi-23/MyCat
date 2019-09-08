@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 287964372782273255}
   - component: {fileID: 2645342110226379257}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: edge3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d3d87348c2a010243a04fa30d5b708e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8999421902308424960}
   - component: {fileID: 1146506616041221166}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: HT1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: f6b18303722183541ae05298d3b84763, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2281251673041736682}
   - component: {fileID: 1833334842335531230}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: edge3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d3d87348c2a010243a04fa30d5b708e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -247,7 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1787768665606637527}
   - component: {fileID: 4130957013426226616}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: track_edge2
   m_TagString: track_edge2
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3863927642153704176}
   - component: {fileID: 1198570354171448507}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: edge3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d3d87348c2a010243a04fa30d5b708e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -383,7 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4386327796082062372}
   - component: {fileID: 7879847604214652424}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: edge3 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: d3d87348c2a010243a04fa30d5b708e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -462,7 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7118127925894765020}
   - component: {fileID: 7945511566001683388}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: track_edge1
   m_TagString: track_edge1
   m_Icon: {fileID: 0}
@@ -519,7 +519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6545030248901972180}
   - component: {fileID: 7795387336038279265}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: HT1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +576,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f6b18303722183541ae05298d3b84763, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -598,7 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4006102205069549387}
   - component: {fileID: 5522810619628274327}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: TrackLevel3~1
   m_TagString: track
   m_Icon: {fileID: 0}
@@ -614,7 +614,7 @@ Transform:
   m_GameObject: {fileID: 9091363376340076480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.92, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 6545030248901972180}
   - {fileID: 8999421902308424960}
