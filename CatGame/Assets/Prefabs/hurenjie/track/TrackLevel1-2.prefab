@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3765228044102410588}
   - component: {fileID: 2481745236783092067}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: track_edge2
   m_TagString: track_edge2
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6104378469947916429}
   - component: {fileID: 5254812841065243510}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: bg_cave2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7440505589680068045}
   - component: {fileID: 6217733100204903970}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: edge2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053073738615212360}
   - component: {fileID: 2053073738615212363}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: HT3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053073738828485856}
   - component: {fileID: 2053073738828485859}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: HT3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053073739094370805}
   - component: {fileID: 2053073739094370804}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: HT20 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053073739695901074}
   - component: {fileID: 2053073739695901077}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: HT3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +541,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053073740350297215}
   - component: {fileID: 2053073740350297214}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: HT20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,7 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053073740356340993}
   - component: {fileID: 2053073740356340992}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: TrackLevel1-2
   m_TagString: track
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ Transform:
   m_GameObject: {fileID: 2053073740356341007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.07, y: 1.87, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2053073738828485856}
   - {fileID: 2053073739695901074}
@@ -691,7 +691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053073740370300653}
   - component: {fileID: 2053073740370300652}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: HT20 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,7 +770,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053073740404293455}
   - component: {fileID: 2053073740404293454}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: HT20 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -849,7 +849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 644410411791585161}
   - component: {fileID: 8951643463582294184}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: bg_cave1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -928,7 +928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6097925740864754130}
   - component: {fileID: 4194651437408993859}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: edge3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2801507062576539083}
   - component: {fileID: 1285576971634759890}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: track_edge1
   m_TagString: track_edge1
   m_Icon: {fileID: 0}
@@ -1064,7 +1064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 945660323470070791}
   - component: {fileID: 3983375994941568932}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: edge3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1143,7 +1143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3497935810135141537}
   - component: {fileID: 9102500827018525261}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: edge2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1221,7 +1221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1322177501100206772}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: stone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
