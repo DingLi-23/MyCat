@@ -131,7 +131,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!114 &8504095189649223201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,16 +202,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5912418176900369448}
     m_Modifications:
-    - target: {fileID: 8171548413782191893, guid: fc583d2a8596ec44599bdda91854549d,
-        type: 3}
-      propertyPath: m_Name
-      value: wheel_back
-      objectReference: {fileID: 0}
-    - target: {fileID: 8171548413782191893, guid: fc583d2a8596ec44599bdda91854549d,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 8171548413782191894, guid: fc583d2a8596ec44599bdda91854549d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -267,6 +257,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8171548413782191893, guid: fc583d2a8596ec44599bdda91854549d,
+        type: 3}
+      propertyPath: m_Name
+      value: wheel_back
+      objectReference: {fileID: 0}
+    - target: {fileID: 8171548413782191893, guid: fc583d2a8596ec44599bdda91854549d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8171548413725284068, guid: fc583d2a8596ec44599bdda91854549d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -318,16 +318,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5912418176900369448}
     m_Modifications:
-    - target: {fileID: 6717366096140610382, guid: 3567a59da2f7d77459a470eca997376c,
-        type: 3}
-      propertyPath: m_Name
-      value: wheel_font
-      objectReference: {fileID: 0}
-    - target: {fileID: 6717366096140610382, guid: 3567a59da2f7d77459a470eca997376c,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 6717366096140610381, guid: 3567a59da2f7d77459a470eca997376c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -382,6 +372,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717366096140610382, guid: 3567a59da2f7d77459a470eca997376c,
+        type: 3}
+      propertyPath: m_Name
+      value: wheel_font
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717366096140610382, guid: 3567a59da2f7d77459a470eca997376c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6717366096082160112, guid: 3567a59da2f7d77459a470eca997376c,
         type: 3}

@@ -34,6 +34,7 @@ TagManager:
   - track
   - batdead
   - carCheck
+  - Reward
   layers:
   - Default
   - TransparentFX
@@ -43,11 +44,11 @@ TagManager:
   - UI
   - 
   - 
-  - track
+  - 
   - car
   - cat
   - bat
-  - 
+  - track
   - 
   - 
   - 
