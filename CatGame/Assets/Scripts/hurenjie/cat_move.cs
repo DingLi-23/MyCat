@@ -11,24 +11,38 @@ public class cat_move : MonoBehaviour
     [Tooltip("猫跳跃高度限制")]
     public float JumpHeight = 0.8f;
     //是否能够跳跃
-    private bool canJump = true;
+    
     private float MaxHeightY;
     private bool JetActive = false;
 
+    private bool grounded = false;
     private bool CatDead = false;
+    private bool canJump = true;
+    private Animator anim = null;
+
     public AudioClip crystal1;//收集砖石音频
     public AudioClip catdead;//猫死亡音频
     private int rewardNum = 0;
 
     public bool bat_dead = false;
 
+
+    
+    public BounceWall bounceWall;
+
     private GameUIManager m_GameUIManager; 
+
 
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
         cat_Transform = GetComponent<Transform>();
+
+        anim = GetComponent<Animator>();
+    
+
         m_GameUIManager = GameObject.Find("UI Root").GetComponent<GameUIManager>();
+
 
     }
 
@@ -46,6 +60,7 @@ public class cat_move : MonoBehaviour
         if (JetActive && canJump)
         {
             rig.AddForce(new Vector2(0, Force));
+            anim.SetBool("grounded", false);
         }
     }
 
@@ -65,7 +80,13 @@ public class cat_move : MonoBehaviour
             CatDead = true;
             AudioSource.PlayClipAtPoint(catdead, Camera.main.transform.position);
             //缺少蝙蝠AI以及猫死亡动画
+            anim.SetBool("catDead", CatDead);
             Debug.Log("cat is deaded");
+            Collider2D c1 = rig.GetComponent<Collider2D>();
+            BoxCollider2D c2 = rig.GetComponentInChildren<BoxCollider2D>();
+            c1.enabled = false;
+            c2.enabled = false;
+            rig.constraints = RigidbodyConstraints2D.None;
         }
     }
 
@@ -74,7 +95,9 @@ public class cat_move : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("car"))
         {
             MaxHeightY = transform.position.y + JumpHeight;
+            anim.SetBool("grounded", true);
             canJump = true;
+            grounded = true;
         }
          if (collision.gameObject.CompareTag("BounceWall"))
         {
