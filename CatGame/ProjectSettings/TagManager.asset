@@ -35,6 +35,7 @@ TagManager:
   - batdead
   - carCheck
   - Reward
+  - stab
   layers:
   - Default
   - TransparentFX
