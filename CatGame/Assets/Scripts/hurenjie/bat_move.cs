@@ -29,7 +29,7 @@ public class bat_move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        edge = Edge.GetComponent<bat_edge>().move;
+        //edge = Edge.GetComponent<bat_edge>().move;
         if (edge == true && transform.position.x - cat.position.x >= distance)
         {
             mycat = GameObject.FindGameObjectWithTag("cat").GetComponent<Transform>().position;
