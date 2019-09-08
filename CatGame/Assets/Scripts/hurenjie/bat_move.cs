@@ -8,6 +8,7 @@ public class bat_move : MonoBehaviour
     private Rigidbody2D rig;
     [Tooltip("蝙蝠飞行速度")]
     public float speed = 4.0f;
+
     public GameObject Edge;
     public bool edge ;
     public float distance = 2.0f;
