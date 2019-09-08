@@ -5,6 +5,7 @@ using UnityEngine;
 public class cat_move : MonoBehaviour
 {
     private Rigidbody2D rig = null;
+    private Transform cat_Transform = null;
     [Tooltip("用于设置主角跳跃施加的力度")]
     public float Force = 35.0f;
     [Tooltip("猫跳跃高度限制")]
@@ -26,6 +27,7 @@ public class cat_move : MonoBehaviour
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
+        cat_Transform = GetComponent<Transform>();
 
     }
 
@@ -74,7 +76,16 @@ public class cat_move : MonoBehaviour
         }
          if (collision.gameObject.CompareTag("BounceWall"))
         {
-            //bounceWall.ReverseMove();
+            if (GameObject.FindGameObjectWithTag("BounceWall").GetComponent<BounceWall>().Awesome ==true)
+            {
+                rig.velocity = GameObject.FindGameObjectWithTag("BounceWall").GetComponent<BounceWall>().direction;
+                cat_Transform.eulerAngles = new Vector3(0, 180, 0);
+            }
+            if (GameObject.FindGameObjectWithTag("BounceWall").GetComponent<BounceWall>().Awesome == false && Input.GetButton("Fire1"))
+            {
+                rig.velocity = GameObject.FindGameObjectWithTag("BounceWall").GetComponent<BounceWall>().direction;
+                cat_Transform.eulerAngles = new Vector3(0, 180, 0);
+            }
         }
 
     }
