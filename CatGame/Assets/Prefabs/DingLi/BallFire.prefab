@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1917616138}
   m_Layer: 0
   m_Name: BallFire
-  m_TagString: Untagged
+  m_TagString: Flame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,7 @@ Animator:
   m_GameObject: {fileID: 1092791626232640335}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 891cbbd80f18c0244b8b9adceb1f98d0, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

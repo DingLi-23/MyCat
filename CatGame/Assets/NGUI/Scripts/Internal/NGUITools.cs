@@ -8,7 +8,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using UnityEngine.Profiling;
 
 /// <summary>
 /// Helper class containing generic functions used throughout the UI library.
@@ -1871,7 +1870,7 @@ static public class NGUITools
 
 			if (mSizeFrame != frame || !Application.isPlaying)
 			{
-				Profiler.BeginSample("Editor-only GC allocation (NGUITools.screenSize)");
+				UnityEngine.Profiling.Profiler.BeginSample("Editor-only GC allocation (NGUITools.screenSize)");
 				mSizeFrame = frame;
 
 				if (s_GetSizeOfMainGameView == null && !mCheckedMainViewFunc)
@@ -1905,7 +1904,7 @@ static public class NGUITools
 					mGameSize = s_GetSizeOfMainGameView();
 				}
 				else mGameSize = new Vector2(Screen.width, Screen.height);
-				Profiler.EndSample();
+				UnityEngine.Profiling.Profiler.EndSample();
 			}
 			return mGameSize;
 		}
