@@ -811,7 +811,6 @@ GameObject:
   - component: {fileID: 3499252757121803043}
   - component: {fileID: 3499252757121803042}
   - component: {fileID: 3499252757121803045}
-  - component: {fileID: 3499252757121803044}
   - component: {fileID: 3499252757121803041}
   m_Layer: 0
   m_Name: RedFlame-1 (1)
@@ -938,24 +937,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.18}
   serializedVersion: 2
   m_Radius: 0.13
---- !u!255 &3499252757121803044
-FixedJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3499252757121803046}
-  m_Enabled: 0
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 3499252757324817496}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -1.112, y: 0.19599998}
-  m_DampingRatio: 0
-  m_Frequency: 0
 --- !u!233 &3499252757121803041
 HingeJoint2D:
   m_ObjectHideFlags: 0

@@ -74,7 +74,7 @@ public class cat_move : MonoBehaviour
         }
          if (collision.gameObject.CompareTag("BounceWall"))
         {
-            bounceWall.ReverseMove();
+            //bounceWall.ReverseMove();
         }
 
     }
