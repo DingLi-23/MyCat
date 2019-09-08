@@ -58,22 +58,22 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: initialLevelMasonry
-    x: 1348
-    y: 1286
-    width: 255
-    height: 249
+  - name: bg
+    x: 1995
+    y: 2028
+    width: 20
+    height: 20
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
     paddingLeft: 0
-    paddingRight: 1
-    paddingTop: 3
-    paddingBottom: 4
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: Interface
-    x: 1604
-    y: 1249
+    x: 1348
+    y: 1025
     width: 64
     height: 62
     borderLeft: 0
@@ -84,63 +84,24 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 1
     paddingBottom: 1
-  - name: level1
-    x: 1733
-    y: 1471
-    width: 64
-    height: 64
+  - name: land
+    x: 1348
+    y: 1088
+    width: 247
+    height: 198
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
+    paddingLeft: 4
+    paddingRight: 5
+    paddingTop: 58
     paddingBottom: 0
-  - name: level2
-    x: 1798
-    y: 1471
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: level3
-    x: 1863
-    y: 1471
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: level4
-    x: 1928
-    y: 1471
-    width: 64
-    height: 64
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
-    paddingBottom: 0
-  - name: level5
+  - name: left
     x: 1604
-    y: 1375
-    width: 64
-    height: 64
+    y: 1406
+    width: 113
+    height: 129
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -151,7 +112,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: Masonry
     x: 1348
-    y: 1037
+    y: 1287
     width: 255
     height: 248
     borderLeft: 0
@@ -163,8 +124,8 @@ MonoBehaviour:
     paddingTop: 3
     paddingBottom: 5
   - name: OverButton
-    x: 1604
-    y: 1184
+    x: 1961
+    y: 1471
     width: 61
     height: 64
     borderLeft: 0
@@ -176,8 +137,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: Photograph
-    x: 1669
-    y: 1390
+    x: 1535
+    y: 1038
     width: 64
     height: 49
     borderLeft: 0
@@ -189,8 +150,8 @@ MonoBehaviour:
     paddingTop: 8
     paddingBottom: 7
   - name: Restore Suspend
-    x: 1604
-    y: 1060
+    x: 1478
+    y: 1029
     width: 56
     height: 58
     borderLeft: 0
@@ -202,8 +163,8 @@ MonoBehaviour:
     paddingTop: 3
     paddingBottom: 3
   - name: return
-    x: 1604
-    y: 1312
+    x: 1413
+    y: 1025
     width: 64
     height: 62
     borderLeft: 0
@@ -214,6 +175,19 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 1
     paddingBottom: 1
+  - name: right
+    x: 1718
+    y: 1406
+    width: 113
+    height: 129
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: ScreenshotsBox
     x: 1025
     y: 1536
@@ -227,6 +201,32 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: ShareButton
+    x: 1538
+    y: 1561
+    width: 254
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 2
+  - name: ShareButton (2)
+    x: 1793
+    y: 1626
+    width: 254
+    height: 60
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 2
   - name: ShareButton
     x: 1538
     y: 1561
@@ -267,7 +267,7 @@ MonoBehaviour:
     paddingTop: 58
     paddingBottom: 93
   - name: tex_eqlopot_png.rcc_000086
-    x: 1604
+    x: 1832
     y: 1440
     width: 128
     height: 95
@@ -306,8 +306,8 @@ MonoBehaviour:
     paddingTop: 27
     paddingBottom: 8
   - name: tex_eqlopot_png.rcc_000132
-    x: 1604
-    y: 1119
+    x: 1961
+    y: 1406
     width: 60
     height: 64
     borderLeft: 0

@@ -17,14 +17,13 @@ public class cat_move : MonoBehaviour
     private bool CatDead = false;
     public AudioClip crystal1;//收集砖石音频
     public AudioClip catdead;//猫死亡音频
-    private int count = 0;
+    private int rewardNum = 0;  //本局获得多少钻石.
+    private GameUIManager m_GameUIManager; 
 
-
-    public BounceWall bounceWall;
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
-       
+        m_GameUIManager = GameObject.Find("UI Root").GetComponent<GameUIManager>();
     }
 
     void Update()
@@ -46,12 +45,13 @@ public class cat_move : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("GameMasonry"))
+        if (collision.gameObject.CompareTag("Reward"))
         {
+            rewardNum++;
             //播放吃金币音乐
             AudioSource.PlayClipAtPoint(crystal1, Camera.main.transform.position);
-            Destroy(collision.gameObject);
-            count++;
+            m_GameUIManager.UpdateScoreLabel(rewardNum); //更新UI分数显示.
+            Destroy(collision.gameObject);        
         }
         if (collision.gameObject.CompareTag("Bat"))
         {
@@ -60,7 +60,10 @@ public class cat_move : MonoBehaviour
             //缺少蝙蝠AI以及猫死亡动画
             Debug.Log("cat is deaded");
         }
-
+        if (collision.gameObject.CompareTag("Flame"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -70,10 +73,18 @@ public class cat_move : MonoBehaviour
             MaxHeightY = transform.position.y + JumpHeight;
             canJump = true;
         }
-         if (collision.gameObject.CompareTag("BounceWall"))
+        if (collision.gameObject.CompareTag("BounceWall"))
         {
-            bounceWall.ReverseMove();
+            if (GameObject.FindGameObjectWithTag("BounceWall").GetComponent<BounceWall>().Awesome == true)
+            {
+                Debug.Log("111");
+                rig.velocity = GameObject.FindGameObjectWithTag("BounceWall").GetComponent<BounceWall>().direction;
+            }
+            else if (GameObject.FindGameObjectWithTag("BounceWall").GetComponent<BounceWall>().Awesome == false && Input.GetButton("Fire1"))
+            {
+                Debug.Log("222");
+                rig.velocity = GameObject.FindGameObjectWithTag("BounceWall").GetComponent<BounceWall>().direction;
+            }
         }
-
     }
 }
