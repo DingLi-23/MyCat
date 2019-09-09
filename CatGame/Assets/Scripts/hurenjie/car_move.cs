@@ -10,13 +10,13 @@ public class car_move : MonoBehaviour
 
     public bool catCloseCar = false;
 
-    //判断小车前轮是否到达轨道边缘
-    public GameObject B;
-    public bool BW;
+    //判断小车后轮是否到达轨道边缘1
+    //public GameObject B;
+    //public bool BW;
 
-    //后轮
-    public GameObject A;
-    public bool AW;
+    //前轮
+    //public GameObject A;
+    //public bool AW;
 
     public Collider2D[] wheel = null;
     void Start()
@@ -28,24 +28,24 @@ public class car_move : MonoBehaviour
 
     void Update()
     {
-        BW = B.GetComponent<A>().B;
-        AW = A.GetComponent<B>().A;
-        if (BW == true)
-        {
-            transform.GetComponent<BoxCollider2D>().enabled = false;
-            foreach (Collider2D collider in wheel)
-            {
-                collider.enabled = false;
-            }
-        }
-        if (AW == true)
-        {
-            transform.GetComponent<BoxCollider2D>().enabled = false;
-            foreach (Collider2D collider in wheel)
-            {
-                collider.enabled = false;
-            }
-        }
+        //BW = B.GetComponent<B>().A;
+        //AW = A.GetComponent<A>().B;
+        //if (BW == true)
+        //{
+        //    transform.GetComponent<BoxCollider2D>().enabled = false;
+        //    foreach (Collider2D collider in wheel)
+        //    {
+        //        collider.enabled = false;
+        //    }
+        //}
+        //if (AW == true)
+        //{
+        //    transform.GetComponent<BoxCollider2D>().enabled = false;
+        //    foreach (Collider2D collider in wheel)
+        //    {
+        //        collider.enabled = false;
+        //    }
+        //}
     }
     private void FixedUpdate()
     {
