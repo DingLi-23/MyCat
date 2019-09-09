@@ -33,9 +33,9 @@ public class CameraMove : MonoBehaviour
             Vector3 nextPos = new Vector3(cat_Transform.position.x + 2, 5, cat_Transform.position.z - 10);
             m_Transform.position = Vector3.Lerp(m_Transform.position, nextPos,Time.deltaTime * 2);
         }
-        if (cat_Transform.position.y < -5)
+        if (cat_Transform.position.y < -15)
         {
-            Vector3 nextPos = new Vector3(cat_Transform.position.x + 2, -5, cat_Transform.position.z - 10);
+            Vector3 nextPos = new Vector3(cat_Transform.position.x + 2, -15, cat_Transform.position.z - 10);
             m_Transform.position = Vector3.Lerp(m_Transform.position, nextPos, Time.deltaTime * 2);
         }
         if (cat_Transform.position.y > -5 && cat_Transform.position.y < 5)
