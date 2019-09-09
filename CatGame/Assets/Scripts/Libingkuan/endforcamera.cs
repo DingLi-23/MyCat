@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class endforcamera : MonoBehaviour
 {
-    public GameObject c;
     public GameObject Endc;
     // Start is called before the first frame update
     void Start()
