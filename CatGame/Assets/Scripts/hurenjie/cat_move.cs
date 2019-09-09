@@ -112,15 +112,28 @@ public class cat_move : MonoBehaviour
             canJump = true;
             grounded = true;
         }
-         if (collision.gameObject.CompareTag("BounceWall"))
+
+        //反弹壁.
+        if (collision.gameObject.CompareTag("BounceWall_rigth"))
         {
-            if (GameObject.FindGameObjectWithTag("BounceWall").GetComponent<BounceWall>().Awesome ==true)
+            if (GameObject.FindGameObjectWithTag("BounceWall_rigth").GetComponent<BounceWall>().Awesome == true)
             {
-                rig.velocity = GameObject.FindGameObjectWithTag("BounceWall").GetComponent<BounceWall>().direction;
+                rig.velocity = GameObject.FindGameObjectWithTag("BounceWall_rigth").GetComponent<BounceWall>().direction;
             }
-            if (GameObject.FindGameObjectWithTag("BounceWall").GetComponent<BounceWall>().Awesome == false && Input.GetButton("Fire1"))
+            if (GameObject.FindGameObjectWithTag("BounceWall_rigth").GetComponent<BounceWall>().Awesome == false && Input.GetButton("Fire1"))
             {
-                rig.velocity = GameObject.FindGameObjectWithTag("BounceWall").GetComponent<BounceWall>().direction;
+                rig.velocity = GameObject.FindGameObjectWithTag("BounceWall_rigth").GetComponent<BounceWall>().direction;
+            }
+        }
+        if (collision.gameObject.CompareTag("BounceWall_left"))
+        {
+            if (GameObject.FindGameObjectWithTag("BounceWall_left").GetComponent<BounceWall>().Awesome == true)
+            {
+                rig.velocity = GameObject.FindGameObjectWithTag("BounceWall_left").GetComponent<BounceWall>().direction;
+            }
+            if (GameObject.FindGameObjectWithTag("BounceWall_left").GetComponent<BounceWall>().Awesome == false && Input.GetButton("Fire1"))
+            {
+                rig.velocity = GameObject.FindGameObjectWithTag("BounceWall_left").GetComponent<BounceWall>().direction;
             }
         }
 
