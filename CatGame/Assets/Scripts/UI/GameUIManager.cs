@@ -13,7 +13,7 @@ public class GameUIManager : MonoBehaviour
     
     private UILabel label_Score; //分数UI.
 
-    private GameObject button_Reset; 
+    private GameObject button_Reset;
 
     void Start()
     {
@@ -40,6 +40,8 @@ public class GameUIManager : MonoBehaviour
     public void ShowOverPanel()
     {
         m_OverPanel.SetActive(true);
+        m_GamePanel.SetActive(false);
+
     }
 
     private void ResetButtonClick(GameObject go)

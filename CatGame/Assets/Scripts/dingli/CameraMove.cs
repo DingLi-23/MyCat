@@ -8,6 +8,8 @@ public class CameraMove : MonoBehaviour
     private Transform m_Transform;
     private Transform cat_Transform;
 
+    private GameUIManager m_GameUIManager;  
+
     public float StartTime;
     public float EndTime;
     private float time;
@@ -19,29 +21,31 @@ public class CameraMove : MonoBehaviour
         m_Transform = gameObject.GetComponent<Transform>();
         cat_Transform = GameObject.FindGameObjectWithTag("cat").GetComponent<Transform>();
         normalPos = m_Transform.position;
+        m_GameUIManager = GameObject.Find("UI Root").GetComponent<GameUIManager>();
     }
 
     void Update()
     {       
         createKW();
+        //if (m_Transform.position.y < -5)
+        //{
+        //    m_GameUIManager.ShowOverPanel();
+        //    m_Transform.position = this.GetComponent<Transform>().position;
+        //}
     }
 
     void LateUpdate()
     {
-
-        //m_Transform.position = cat_Transform.position + new Vector3(2, 0, -10);
-        if (cat_Transform.position.y > 5)
-        {
+        if (cat_Transform.position.y > 5){
             Vector3 nextPos = new Vector3(cat_Transform.position.x + 2, 5, cat_Transform.position.z - 10);
             m_Transform.position = Vector3.Lerp(m_Transform.position, nextPos,Time.deltaTime * 2);
         }
-        if (cat_Transform.position.y < -15)
-        {
-            Vector3 nextPos = new Vector3(cat_Transform.position.x + 2, -15, cat_Transform.position.z - 10);
+        if (cat_Transform.position.y < -5){
+            Vector3 nextPos = new Vector3(this.GetComponent<Transform>().position.x, -5, cat_Transform.position.z - 10);
             m_Transform.position = Vector3.Lerp(m_Transform.position, nextPos, Time.deltaTime * 2);
+            m_GameUIManager.ShowOverPanel();
         }
-        if (cat_Transform.position.y > -5 && cat_Transform.position.y < 5)
-        {
+        if (cat_Transform.position.y > -5 && cat_Transform.position.y < 5){
             Vector3 nextPos = new Vector3(cat_Transform.position.x + 2, cat_Transform.position.y, cat_Transform.position.z - 10);
             m_Transform.position = Vector3.Lerp(m_Transform.position, nextPos, Time.deltaTime);
         }

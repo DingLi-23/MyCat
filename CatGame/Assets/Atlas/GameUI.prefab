@@ -86,7 +86,7 @@ MonoBehaviour:
     paddingBottom: 4
   - name: Interface
     x: 1966
-    y: 1410
+    y: 1343
     width: 64
     height: 62
     borderLeft: 0
@@ -111,8 +111,8 @@ MonoBehaviour:
     paddingTop: 58
     paddingBottom: 0
   - name: left
-    x: 1604
-    y: 1146
+    x: 1852
+    y: 1406
     width: 113
     height: 129
     borderLeft: 0
@@ -124,8 +124,34 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: level1
+    x: 1966
+    y: 1406
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: level2
     x: 1852
     y: 1341
+    width: 64
+    height: 64
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: level3
+    x: 1966
+    y: 1471
     width: 64
     height: 64
     borderLeft: 0
@@ -150,8 +176,8 @@ MonoBehaviour:
     paddingTop: 3
     paddingBottom: 5
   - name: OverButton
-    x: 1966
-    y: 1345
+    x: 1847
+    y: 1211
     width: 61
     height: 64
     borderLeft: 0
@@ -189,8 +215,8 @@ MonoBehaviour:
     paddingTop: 3
     paddingBottom: 3
   - name: return
-    x: 1966
-    y: 1473
+    x: 1604
+    y: 1083
     width: 64
     height: 62
     borderLeft: 0
@@ -202,8 +228,8 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 1
   - name: right
-    x: 1852
-    y: 1406
+    x: 1604
+    y: 1146
     width: 113
     height: 129
     borderLeft: 0
@@ -319,8 +345,8 @@ MonoBehaviour:
     paddingTop: 27
     paddingBottom: 8
   - name: tex_eqlopot_png.rcc_000132
-    x: 1604
-    y: 1081
+    x: 1909
+    y: 1211
     width: 60
     height: 64
     borderLeft: 0

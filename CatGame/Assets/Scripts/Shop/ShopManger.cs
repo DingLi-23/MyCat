@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 商城模块总控制器.
@@ -19,6 +20,7 @@ public class ShopManger : MonoBehaviour
     //左右按钮.
     private GameObject leftButton;
     private GameObject rightButton;
+    private GameObject button_Play;   //开始按钮.
 
     //商城UI集合
     private List<GameObject> shopUI = new List<GameObject>();
@@ -31,6 +33,7 @@ public class ShopManger : MonoBehaviour
     void Start()
     {
         shopData = new ShopData();
+
         //加载XML.
         shopData.ReadXmlByPath(xmlPath);
         shopData.ReadMasonryandshopState(savePath);
@@ -49,8 +52,10 @@ public class ShopManger : MonoBehaviour
         //左右按钮事件.
         leftButton = GameObject.Find("LeftButton");
         rightButton = GameObject.Find("RightButton");
+        button_Play = GameObject.Find("Play");
         UIEventListener.Get(leftButton).onClick = LeftButtonClick;
         UIEventListener.Get(rightButton).onClick = RightButtonClick;
+        UIEventListener.Get(button_Play).onClick = PlayButtonClick;
 
         //UI与xml数据的同步.
         masonryNums = GameObject.Find("Masonry/MasonryNum").GetComponent<UILabel>();
@@ -91,7 +96,10 @@ public class ShopManger : MonoBehaviour
         if (index > 0)
         {
           index--;
-          ShopUIHideAndShow(index);            
+          int temp = shopData.shopState[index];
+          SetPlayButtonState(temp);
+          ShopUIHideAndShow(index);
+          
         }
 
     }
@@ -101,9 +109,28 @@ public class ShopManger : MonoBehaviour
         if (index < shopUI.Count - 1)
         {
           index++;
+          int temp = shopData.shopState[index];
+          SetPlayButtonState(temp);
           ShopUIHideAndShow(index);            
         }
 
+    }
+
+    private void PlayButtonClick(GameObject go)
+    {
+        //场景跳转.
+        SceneManager.LoadScene("Select");
+    }
+    public void SetPlayButtonState(int state)
+    {
+        if (state == 1)
+        {
+          button_Play.SetActive(true);            
+        }
+        else
+        {
+            button_Play.SetActive(false);
+        }
     }
 
     /// <summary>
