@@ -16,6 +16,7 @@ public class ShopItemUI : MonoBehaviour
     private GameObject itemState;//商品状态.
 
     public int itemPrice; //价格.
+    public int itemId;    //商品ID.
 
     void Awake()
     {
@@ -33,12 +34,13 @@ public class ShopItemUI : MonoBehaviour
     /// 给商品的UI赋值.
     /// </summary>
     /// <param name="price"></param>
-    public void SetUIValue(string price,GameObject model,int state)
+    public void SetUIValue(string id,string price,GameObject model,int state)
     {
         //给UI元素赋值.
         ui_Price.text = price;
 
         itemPrice = int.Parse(price);
+        itemId = int.Parse(id);
 
         //判断状态.
         if (state == 1)

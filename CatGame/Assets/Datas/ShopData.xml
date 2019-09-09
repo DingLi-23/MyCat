@@ -2,9 +2,11 @@
 	<Item>
 		<model>CatUI/cat_1</model>
 		<price>100</price>
+    <id>0</id>
 	</Item>
 	<Item>
 		<model>CatUI/cat_2</model>
 		<price>150</price>
+    <id>1</id>
 	</Item>
 </Shop>
