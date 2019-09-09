@@ -18,18 +18,25 @@ public class bat_move : MonoBehaviour
 
     private Transform cat;
 
+    public GameObject deadplane;
+    private bool batDead = false;
+    private Animator anim = null;
+
     
     void Start()
     {
         //bat_trans = GetComponent<Transform>();
         rig = GetComponent<Rigidbody2D>();
         cat = GameObject.FindGameObjectWithTag("cat").GetComponent<Transform>();
+        anim = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         edge = Edge.GetComponent<bat_edge>().move;
+        batDead = deadplane.GetComponent<deadplane>().batdead;
         if (edge == true && transform.position.x - cat.position.x >= distance)
         {
             mycat = GameObject.FindGameObjectWithTag("cat").GetComponent<Transform>().position;
@@ -45,6 +52,10 @@ public class bat_move : MonoBehaviour
         {
             Move();
             Destroy(gameObject, 1.0f);
+        }
+        if (batDead == true)
+        {
+            anim.SetBool("batDead",true);
         }
     }
     private void Move()

@@ -33,9 +33,9 @@ TagManager:
   - track_edge2
   - track
   - batdead
-  - carCheck
   - Reward
   - stab
+  - catCheck
   layers:
   - Default
   - TransparentFX

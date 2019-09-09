@@ -88,6 +88,11 @@ public class cat_move : MonoBehaviour
             c2.enabled = false;
             rig.constraints = RigidbodyConstraints2D.None;
         }
+        if (collision.gameObject.CompareTag("batdead"))
+        {
+            anim.SetBool("grounded", false);
+         
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

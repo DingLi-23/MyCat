@@ -278,6 +278,8 @@ MonoBehaviour:
   speed: 4
   Edge: {fileID: 0}
   edge: 0
+  distance: 2
+  deadplane: {fileID: 0}
 --- !u!95 &1600589676
 Animator:
   serializedVersion: 3
@@ -288,7 +290,7 @@ Animator:
   m_GameObject: {fileID: 7177389873195108452}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f4fedf3867d5b4644b5562b7b9c4103b, type: 2}
+  m_Controller: {fileID: 9100000, guid: a950af2cefadec744922da4973a1b183, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
