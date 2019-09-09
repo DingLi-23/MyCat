@@ -50,4 +50,25 @@ public class ShopData
             shopState.Add(int.Parse(nodeLis[i].InnerText));
         }
     }
+
+    /// <summary>
+    /// 更新XML.
+    /// </summary>
+    /// <param name="?"></param>
+    public void UpdateXMLData(string path,string key,string value)
+    {
+        XmlDocument doc = new XmlDocument();
+        doc.Load(path);
+        XmlNode root = doc.SelectSingleNode("SaveData");
+        XmlNodeList nodeList = root.ChildNodes;
+
+        foreach (XmlNode node in nodeList)
+        {
+            if (node.Name == key)
+            {
+                node.InnerText = value;
+                doc.Save(path);
+            }
+        }
+    }
 }

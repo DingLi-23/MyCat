@@ -19,7 +19,6 @@ public class lian : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("cat"))
         {
-            Debug.Log("111");
             //my_Join.constraints =~ RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
            my_Join.constraints = RigidbodyConstraints2D.None;
            my_Join.constraints = RigidbodyConstraints2D.FreezeRotation;

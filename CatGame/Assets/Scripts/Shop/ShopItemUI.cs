@@ -15,6 +15,8 @@ public class ShopItemUI : MonoBehaviour
     private GameObject buyButton;
     private GameObject itemState;//商品状态.
 
+    public int itemPrice; //价格.
+
     void Awake()
     {
         m_Transform = gameObject.GetComponent<Transform>();
@@ -35,6 +37,8 @@ public class ShopItemUI : MonoBehaviour
     {
         //给UI元素赋值.
         ui_Price.text = price;
+
+        itemPrice = int.Parse(price);
 
         //判断状态.
         if (state == 1)
@@ -59,5 +63,11 @@ public class ShopItemUI : MonoBehaviour
     private void BuyButtonClick(GameObject go)
     {
         Debug.Log("购买点击");
+        SendMessageUpwards("CalcItemPrice", this);
+    }
+
+    public void BuyEnd()
+    {
+        itemState.SetActive(false);
     }
 }
