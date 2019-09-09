@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2585092139383681086}
   m_Layer: 0
   m_Name: BounceWall-left
-  m_TagString: BounceWall
+  m_TagString: BounceWall_left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
