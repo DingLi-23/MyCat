@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class deadplane : MonoBehaviour
 {
-    private Rigidbody2D rig = null;
+    private Rigidbody2D cat;
     public bool batdead = false;
+    public float catBounForce_x = 120.0f;
+    public float catBounForce_y = 120.0f;
     // Start is called before the first frame update
     void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
+        cat = GameObject.FindGameObjectWithTag("cat").GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -19,15 +21,16 @@ public class deadplane : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("catCheck"))
+        Collider2D rig = transform.GetComponentInParent<Collider2D>();
+        if (collision.gameObject.CompareTag("cat"))
         {
-            Collider2D deadPlane = GetComponent<BoxCollider2D>();
-            Collider2D bat = rig.GetComponentInParent<PolygonCollider2D>();
+            BoxCollider2D deadPlane = GetComponent<BoxCollider2D>();
             batdead = true;
+            cat.AddForce(new Vector2(catBounForce_x, catBounForce_y));
             deadPlane.enabled = false;
-            bat.enabled = false ;
+            rig.enabled = false;
+            //bat.enabled = false ;
             Destroy(gameObject, 1.0f);
-            Debug.Log("batdead1");
         }
     }
 }

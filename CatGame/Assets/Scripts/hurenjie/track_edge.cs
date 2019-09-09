@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class track_edge : MonoBehaviour
 {
-    public bool CloseCarCollision = false;
+    private Collider2D []col = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +18,13 @@ public class track_edge : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("track_edge1"))
+        if (collision.gameObject.CompareTag("car"))
         {
-            CloseCarCollision = true;
+            col = collision.gameObject.GetComponentsInChildren<Collider2D>(true);
+            foreach (Collider2D c in col)
+            {
+                c.enabled = false;
+            }
         }
     }
 }
