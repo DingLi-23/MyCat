@@ -75,7 +75,7 @@ public class cat_move : MonoBehaviour
             Destroy(collision.gameObject);
            
         }
-        if (collision.gameObject.CompareTag("Bat") || collision.gameObject.CompareTag("Flame")|| collision.gameObject.CompareTag("stab"))
+        if (collision.gameObject.CompareTag("Bat") )
         {
             CatDead = true;
             AudioSource.PlayClipAtPoint(catdead, Camera.main.transform.position);
@@ -87,6 +87,16 @@ public class cat_move : MonoBehaviour
             c1.enabled = false;
             c2.enabled = false;
             rig.constraints = RigidbodyConstraints2D.None;
+        }
+        if (collision.gameObject.CompareTag("Flame"))
+        {
+            CatDead = true;
+            AudioSource.PlayClipAtPoint(catdead, Camera.main.transform.position);
+            anim.SetBool("catDead", CatDead);
+            Collider2D c1 = rig.GetComponent<Collider2D>();
+            BoxCollider2D c2 = rig.GetComponentInChildren<BoxCollider2D>();
+            c1.enabled = false;
+            c2.enabled = false;
         }
         if (collision.gameObject.CompareTag("batdead"))
         {
