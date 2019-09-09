@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e52449c0030e94da2de9b87dd55588, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  batdead: 0
 --- !u!1 &6720787273484434096
 GameObject:
   m_ObjectHideFlags: 0
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 3c1dc41fa09d6fd49a3a456439b8dfe0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -293,6 +294,7 @@ MonoBehaviour:
   Edge: {fileID: 800893495963848436}
   edge: 0
   distance: 2
+  deadplane: {fileID: 0}
 --- !u!95 &107036552
 Animator:
   serializedVersion: 3
