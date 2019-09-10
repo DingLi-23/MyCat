@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 商城模块总控制器.
@@ -19,6 +20,7 @@ public class ShopManger : MonoBehaviour
     //左右按钮.
     private GameObject leftButton;
     private GameObject rightButton;
+    private GameObject button_Play;   //开始按钮.
 
     //商城UI集合
     private List<GameObject> shopUI = new List<GameObject>();
@@ -31,6 +33,7 @@ public class ShopManger : MonoBehaviour
     void Start()
     {
         shopData = new ShopData();
+
         //加载XML.
         shopData.ReadXmlByPath(xmlPath);
         shopData.ReadMasonryandshopState(savePath);
@@ -49,8 +52,10 @@ public class ShopManger : MonoBehaviour
         //左右按钮事件.
         leftButton = GameObject.Find("LeftButton");
         rightButton = GameObject.Find("RightButton");
+        button_Play = GameObject.Find("Play");
         UIEventListener.Get(leftButton).onClick = LeftButtonClick;
         UIEventListener.Get(rightButton).onClick = RightButtonClick;
+        UIEventListener.Get(button_Play).onClick = PlayButtonClick;
 
         //UI与xml数据的同步.
         masonryNums = GameObject.Find("Masonry/MasonryNum").GetComponent<UILabel>();
@@ -78,7 +83,7 @@ public class ShopManger : MonoBehaviour
             //加载对应的猫.
             GameObject cat = Resources.Load<GameObject>(shopData.shopList[i].Model);
             //给商品UI元素赋值.
-            item.GetComponent<ShopItemUI>().SetUIValue(shopData.shopList[i].Price, cat, shopData.shopState[i]);
+            item.GetComponent<ShopItemUI>().SetUIValue(shopData.shopList[i].Id,shopData.shopList[i].Price, cat, shopData.shopState[i]);
             //添加UI
             shopUI.Add(item);
         }
@@ -91,7 +96,10 @@ public class ShopManger : MonoBehaviour
         if (index > 0)
         {
           index--;
-          ShopUIHideAndShow(index);            
+          int temp = shopData.shopState[index];
+          SetPlayButtonState(temp);
+          ShopUIHideAndShow(index);
+          
         }
 
     }
@@ -101,9 +109,28 @@ public class ShopManger : MonoBehaviour
         if (index < shopUI.Count - 1)
         {
           index++;
+          int temp = shopData.shopState[index];
+          SetPlayButtonState(temp);
           ShopUIHideAndShow(index);            
         }
 
+    }
+
+    private void PlayButtonClick(GameObject go)
+    {
+        //场景跳转.
+        SceneManager.LoadScene("Select");
+    }
+    public void SetPlayButtonState(int state)
+    {
+        if (state == 1)
+        {
+          button_Play.SetActive(true);            
+        }
+        else
+        {
+            button_Play.SetActive(false);
+        }
     }
 
     /// <summary>
@@ -128,6 +155,8 @@ public class ShopManger : MonoBehaviour
             item.BuyEnd();                           //隐藏购买UI按钮.
             shopData.masonryCount -= item.itemPrice; //减去已经消耗的钻石.
             UpdateUI();                              //更新UI显示.
+            shopData.UpdateXMLData(savePath, "MasonryCount",shopData.masonryCount.ToString()); //更新XML的钻石的数量.
+            shopData.UpdateXMLData(savePath, "ID" + item.itemId, "1");                         //更新商品状态.
         }
         else
         {

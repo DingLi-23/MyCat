@@ -101,6 +101,7 @@ public class cat_move : MonoBehaviour
             anim.SetBool("grounded", false);
          
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
