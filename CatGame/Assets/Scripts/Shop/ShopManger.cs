@@ -59,9 +59,34 @@ public class ShopManger : MonoBehaviour
 
         //UI与xml数据的同步.
         masonryNums = GameObject.Find("Masonry/MasonryNum").GetComponent<UILabel>();
-        UpdateUI();
+        //UpdateUI();
+
+        //读取PlayerPerfs中的钻石数.
+        int tempMasonry = PlayerPrefs.GetInt("MasonryCount", 0);
+        if (tempMasonry  > 0)
+        {
+            int masonry = shopData.masonryCount + tempMasonry;
+            //更新UI
+            UpdateUIMasonry(masonry);           
+            //更新XML中的数据.
+            shopData.UpdateXMLData(savePath, "MasonryCount", masonry.ToString());
+            //清空PlayerPrefs
+            PlayerPrefs.SetInt("MasonryCount", 0);
+        }
+        else
+        {
+            //更新UI.
+            UpdateUIMasonry(shopData.masonryCount);
+        }
+
+        SetPlayerInfo(shopData.shopList[0].Model);
 
         CreateAllShopUI();
+    }
+
+    private void UpdateUIMasonry(int masonry)
+    {
+        masonryNums.text = masonry.ToString();
     }
 
     /// <summary>
@@ -98,10 +123,9 @@ public class ShopManger : MonoBehaviour
           index--;
           int temp = shopData.shopState[index];
           SetPlayButtonState(temp);
+          SetPlayerInfo(shopData.shopList[index].Model);
           ShopUIHideAndShow(index);
-          
         }
-
     }
 
     private void RightButtonClick(GameObject go)
@@ -111,9 +135,9 @@ public class ShopManger : MonoBehaviour
           index++;
           int temp = shopData.shopState[index];
           SetPlayButtonState(temp);
+          SetPlayerInfo(shopData.shopList[index].Model);
           ShopUIHideAndShow(index);            
         }
-
     }
 
     private void PlayButtonClick(GameObject go)
@@ -162,5 +186,14 @@ public class ShopManger : MonoBehaviour
         {
             Debug.Log("购买失败，钻石不够");
         }
+    }
+
+    /// <summary>
+    /// 存储角色信息到PlayerPrefs
+    /// </summary>
+    /// <param name="name"></param>
+    private void SetPlayerInfo(string name)
+    {
+        PlayerPrefs.SetString("PlayerName", name);
     }
 }
