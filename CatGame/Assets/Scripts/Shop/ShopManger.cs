@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 商城模块总控制器.
@@ -19,6 +20,7 @@ public class ShopManger : MonoBehaviour
     //左右按钮.
     private GameObject leftButton;
     private GameObject rightButton;
+    private GameObject button_Play;   //开始按钮.
 
     //商城UI集合
     private List<GameObject> shopUI = new List<GameObject>();
@@ -31,6 +33,7 @@ public class ShopManger : MonoBehaviour
     void Start()
     {
         shopData = new ShopData();
+
         //加载XML.
         shopData.ReadXmlByPath(xmlPath);
         shopData.ReadMasonryandshopState(savePath);
@@ -49,14 +52,41 @@ public class ShopManger : MonoBehaviour
         //左右按钮事件.
         leftButton = GameObject.Find("LeftButton");
         rightButton = GameObject.Find("RightButton");
+        button_Play = GameObject.Find("Play");
         UIEventListener.Get(leftButton).onClick = LeftButtonClick;
         UIEventListener.Get(rightButton).onClick = RightButtonClick;
+        UIEventListener.Get(button_Play).onClick = PlayButtonClick;
 
         //UI与xml数据的同步.
         masonryNums = GameObject.Find("Masonry/MasonryNum").GetComponent<UILabel>();
-        UpdateUI();
+        //UpdateUI();
+
+        //读取PlayerPerfs中的钻石数.
+        int tempMasonry = PlayerPrefs.GetInt("MasonryCount", 0);
+        if (tempMasonry  > 0)
+        {
+            int masonry = shopData.masonryCount + tempMasonry;
+            //更新UI
+            UpdateUIMasonry(masonry);           
+            //更新XML中的数据.
+            shopData.UpdateXMLData(savePath, "MasonryCount", masonry.ToString());
+            //清空PlayerPrefs
+            PlayerPrefs.SetInt("MasonryCount", 0);
+        }
+        else
+        {
+            //更新UI.
+            UpdateUIMasonry(shopData.masonryCount);
+        }
+
+        SetPlayerInfo(shopData.shopList[0].Model);
 
         CreateAllShopUI();
+    }
+
+    private void UpdateUIMasonry(int masonry)
+    {
+        masonryNums.text = masonry.ToString();
     }
 
     /// <summary>
@@ -91,9 +121,11 @@ public class ShopManger : MonoBehaviour
         if (index > 0)
         {
           index--;
-          ShopUIHideAndShow(index);            
+          int temp = shopData.shopState[index];
+          SetPlayButtonState(temp);
+          SetPlayerInfo(shopData.shopList[index].Model);
+          ShopUIHideAndShow(index);
         }
-
     }
 
     private void RightButtonClick(GameObject go)
@@ -101,9 +133,28 @@ public class ShopManger : MonoBehaviour
         if (index < shopUI.Count - 1)
         {
           index++;
+          int temp = shopData.shopState[index];
+          SetPlayButtonState(temp);
+          SetPlayerInfo(shopData.shopList[index].Model);
           ShopUIHideAndShow(index);            
         }
+    }
 
+    private void PlayButtonClick(GameObject go)
+    {
+        //场景跳转.
+        SceneManager.LoadScene("Select");
+    }
+    public void SetPlayButtonState(int state)
+    {
+        if (state == 1)
+        {
+          button_Play.SetActive(true);            
+        }
+        else
+        {
+            button_Play.SetActive(false);
+        }
     }
 
     /// <summary>
@@ -135,5 +186,14 @@ public class ShopManger : MonoBehaviour
         {
             Debug.Log("购买失败，钻石不够");
         }
+    }
+
+    /// <summary>
+    /// 存储角色信息到PlayerPrefs
+    /// </summary>
+    /// <param name="name"></param>
+    private void SetPlayerInfo(string name)
+    {
+        PlayerPrefs.SetString("PlayerName", name);
     }
 }

@@ -1,4 +1,9 @@
 <Shop>
+  <Item>
+    <model>CatUI/cat_0</model>
+    <price>100</price>
+    <id>0</id>
+  </Item>
 	<Item>
 		<model>CatUI/cat_1</model>
 		<price>100</price>

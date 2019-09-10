@@ -23,13 +23,6 @@ public class Endc : MonoBehaviour
             
             a = 0;
             GetComponent<AudioSource>().enabled = true;
-
-
-
-
-            //GetComponent<AudioSource>().enabled = true;//声音开关选项
-            //MainCamera.GetComponent<Camera>().orthographicSize = 3;//摄像头缩放
-            //Debug.Log("3");
         }
     }
 }
