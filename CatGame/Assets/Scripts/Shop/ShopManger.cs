@@ -78,7 +78,7 @@ public class ShopManger : MonoBehaviour
             //加载对应的猫.
             GameObject cat = Resources.Load<GameObject>(shopData.shopList[i].Model);
             //给商品UI元素赋值.
-            item.GetComponent<ShopItemUI>().SetUIValue(shopData.shopList[i].Price, cat, shopData.shopState[i]);
+            item.GetComponent<ShopItemUI>().SetUIValue(shopData.shopList[i].Id,shopData.shopList[i].Price, cat, shopData.shopState[i]);
             //添加UI
             shopUI.Add(item);
         }
@@ -128,6 +128,8 @@ public class ShopManger : MonoBehaviour
             item.BuyEnd();                           //隐藏购买UI按钮.
             shopData.masonryCount -= item.itemPrice; //减去已经消耗的钻石.
             UpdateUI();                              //更新UI显示.
+            shopData.UpdateXMLData(savePath, "MasonryCount",shopData.masonryCount.ToString()); //更新XML的钻石的数量.
+            shopData.UpdateXMLData(savePath, "ID" + item.itemId, "1");                         //更新商品状态.
         }
         else
         {

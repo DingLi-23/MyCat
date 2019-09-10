@@ -26,9 +26,10 @@ public class ShopData
        {
            string model = node.ChildNodes[0].InnerText;
            string price = node.ChildNodes[1].InnerText;
+           string id = node.ChildNodes[2].InnerText;
 
            //存储到List实体集合中.
-           ShopItem item = new ShopItem(model,price);
+           ShopItem item = new ShopItem(model,price,id);
            shopList.Add(item);
        }
     }

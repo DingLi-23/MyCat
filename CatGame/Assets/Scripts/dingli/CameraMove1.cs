@@ -16,11 +16,10 @@ public class CameraMove1 : MonoBehaviour
     {
         m_Transform = gameObject.GetComponent<Transform>();
         cat_Transform = GameObject.FindGameObjectWithTag("cat").GetComponent<Transform>();
-
     }
 
-    void Update()
+    void LateUpdate()
     {
-        m_Transform.position = cat_Transform.position + new Vector3(2,0,-10);
+        m_Transform.position = cat_Transform.position + new Vector3(2, 0, -10);
     }
 }

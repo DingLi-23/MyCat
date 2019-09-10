@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - BounceWall
   - Flame
   - GameMasonry
   - Bat
@@ -36,6 +35,9 @@ TagManager:
   - Reward
   - stab
   - catCheck
+  - carCheck
+  - BounceWall_left
+  - BounceWall_rigth
   layers:
   - Default
   - TransparentFX

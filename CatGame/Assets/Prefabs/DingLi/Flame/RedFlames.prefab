@@ -150,7 +150,9 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1465468942, guid: 2f66738a5a0938746a6a2209e14ddb33, type: 3}
+    - {fileID: 1465468943, guid: 2f66738a5a0938746a6a2209e14ddb33, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2f66738a5a0938746a6a2209e14ddb33, type: 3}
 --- !u!1 &676292368783249479 stripped
 GameObject:
@@ -240,6 +242,8 @@ PrefabInstance:
     - {fileID: 802897537384061410, guid: 2f66738a5a0938746a6a2209e14ddb33, type: 3}
     - {fileID: 802897537384061410, guid: 2f66738a5a0938746a6a2209e14ddb33, type: 3}
     - {fileID: 802897537384061410, guid: 2f66738a5a0938746a6a2209e14ddb33, type: 3}
+    - {fileID: 1465468942, guid: 2f66738a5a0938746a6a2209e14ddb33, type: 3}
+    - {fileID: 1465468943, guid: 2f66738a5a0938746a6a2209e14ddb33, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2f66738a5a0938746a6a2209e14ddb33, type: 3}
 --- !u!1 &676292368765352972 stripped
 GameObject:
@@ -325,7 +329,9 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1465468942, guid: 2f66738a5a0938746a6a2209e14ddb33, type: 3}
+    - {fileID: 1465468943, guid: 2f66738a5a0938746a6a2209e14ddb33, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2f66738a5a0938746a6a2209e14ddb33, type: 3}
 --- !u!1 &676292370685142328 stripped
 GameObject:
