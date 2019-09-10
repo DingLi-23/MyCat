@@ -6,6 +6,7 @@ public class Endc : MonoBehaviour
 {
     public GameObject MainCamera;
     public int a = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +25,6 @@ public class Endc : MonoBehaviour
             
             a = 0;
             GetComponent<AudioSource>().enabled = true;
-
-
-
-
             //GetComponent<AudioSource>().enabled = true;//声音开关选项
             //MainCamera.GetComponent<Camera>().orthographicSize = 3;//摄像头缩放
             //Debug.Log("3");

@@ -18,20 +18,20 @@ public class ShopData
 
     public void ReadXmlByPath(string path)
     {
-       XmlDocument doc = new XmlDocument();
-       doc.Load(path);
-       XmlNode root = doc.SelectSingleNode("Shop");
-       XmlNodeList nodeLis = root.ChildNodes;
-       foreach  (XmlNode node in nodeLis)
-       {
-           string model = node.ChildNodes[0].InnerText;
-           string price = node.ChildNodes[1].InnerText;
-           string id = node.ChildNodes[2].InnerText;
+        XmlDocument doc = new XmlDocument();
+        doc.Load(path);
+        XmlNode root = doc.SelectSingleNode("Shop");
+        XmlNodeList nodeLis = root.ChildNodes;
+        foreach (XmlNode node in nodeLis)
+        {
+            string model = node.ChildNodes[0].InnerText;
+            string price = node.ChildNodes[1].InnerText;
+            string id = node.ChildNodes[2].InnerText;
 
-           //存储到List实体集合中.
-           ShopItem item = new ShopItem(model,price,id);
-           shopList.Add(item);
-       }
+            //存储到List实体集合中.
+            ShopItem item = new ShopItem(model, price, id);
+            shopList.Add(item);
+        }
     }
     /// <summary>
     /// 读取钻石数.
@@ -56,7 +56,7 @@ public class ShopData
     /// 更新XML.
     /// </summary>
     /// <param name="?"></param>
-    public void UpdateXMLData(string path,string key,string value)
+    public void UpdateXMLData(string path, string key, string value)
     {
         XmlDocument doc = new XmlDocument();
         doc.Load(path);
@@ -73,3 +73,4 @@ public class ShopData
         }
     }
 }
+

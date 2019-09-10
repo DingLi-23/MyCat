@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3786278644495459170}
   - component: {fileID: 5910414086819440557}
   - component: {fileID: 8121984102365425477}
+  - component: {fileID: 3932573269821072565}
   m_Layer: 0
   m_Name: GameMasonry
   m_TagString: Reward
@@ -113,3 +114,18 @@ PolygonCollider2D:
       - {x: 0.3766588, y: -0.16981187}
       - {x: 0.38332945, y: 0.15995818}
       - {x: 0.009871572, y: 0.57}
+--- !u!114 &3932573269821072565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9195958931022992852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5600eb195fbbf30408a14b34b2afb29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DD: {fileID: 1562161249310989182, guid: 6a474b2179979ac4086b2bb462287dda, type: 3}
+  Count: 0
+  pick_gem: {fileID: 0}

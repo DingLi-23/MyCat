@@ -27,11 +27,6 @@ public class CameraMove : MonoBehaviour
     void Update()
     {       
         createKW();
-        //if (m_Transform.position.y < -5)
-        //{
-        //    m_GameUIManager.ShowOverPanel();
-        //    m_Transform.position = this.GetComponent<Transform>().position;
-        //}
     }
 
     void LateUpdate()
@@ -77,6 +72,7 @@ public class CameraMove : MonoBehaviour
             this.GetComponent<Camera>().orthographicSize += 0.04f;
         } 
     }
+
     private void createKW()
     {
         if (Input.GetButtonDown("Fire1"))

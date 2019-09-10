@@ -1,12 +1,13 @@
 ﻿/// <summary>
 /// Shop物品Item实体类.
 /// </summary>
-public class ShopItem {
+public class ShopItem
+{
     private string model;
     private string price;
     private string id;
 
-    public ShopItem(string model,string price,string id)
+    public ShopItem(string model, string price, string id)
     {
         this.model = model;
         this.price = price;
@@ -15,7 +16,7 @@ public class ShopItem {
     public string Model
     {
         get { return model; }
-        set { model = value;}
+        set { model = value; }
     }
 
     public string Price
@@ -34,3 +35,4 @@ public class ShopItem {
         return string.Format("model:{0},price:{1}", model, price); ;
     }
 }
+

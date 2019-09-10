@@ -16,13 +16,15 @@ public class GameUIManager : MonoBehaviour
 
     private GameObject button_Reset;
     private GameObject button_Suspend;
-    private GameObject button_Aging;
+    private GameObject button_Main;
+    private GameObject button_Again;
 
     //OverpaneInfo.
     private UILabel DiamondsNu;  
 
     void Start()
     {
+        Time.timeScale = 1;
         m_GamePanel = GameObject.Find("GamePanel");
         m_OverPanel = GameObject.Find("OverPanel");
         m_SuspendPanel = GameObject.Find("SuspendPanel");      
@@ -31,16 +33,16 @@ public class GameUIManager : MonoBehaviour
         label_Score.text = "0";
 
         DiamondsNu = GameObject.Find("DiamondsNum2").GetComponent<UILabel>();
-
-        DiamondsNu = GameObject.Find("Diamonds/DiamondsNum2").GetComponent<UILabel>();
+        DiamondsNu = GameObject.Find("DiamondsNum2").GetComponent<UILabel>();
 
         button_Reset = GameObject.Find("Reset");
-        UIEventListener.Get(button_Reset).onClick = ResetButtonClick;
         button_Suspend = GameObject.Find("suspend");
+        button_Main = GameObject.Find("Main");
+        button_Again = GameObject.Find("again");
+        UIEventListener.Get(button_Reset).onClick = ResetButtonClick;   
         UIEventListener.Get(button_Suspend).onClick = SuspendButtonClick;
-
-        button_Aging = GameObject.Find("aging");
-        UIEventListener.Get(button_Suspend).onClick = AgingButtonClick;
+        UIEventListener.Get(button_Main).onClick = MainButtonClick;
+        UIEventListener.Get(button_Again).onClick = AgainButtonClick;
 
         m_OverPanel.SetActive(false);  //结束面板默认隐藏.
         m_SuspendPanel.SetActive(false);
@@ -62,7 +64,6 @@ public class GameUIManager : MonoBehaviour
         SetOverPanelInfo();
     }
 
-
     private void ResetButtonClick(GameObject go)
     {
         SceneManager.LoadScene("Start");
@@ -73,15 +74,19 @@ public class GameUIManager : MonoBehaviour
         Debug.Log("暂停");
         Time.timeScale = 0;
         m_SuspendPanel.SetActive(true);
-        m_GamePanel.SetActive(false);
     }
 
-    private void AgingButtonClick(GameObject go)
+    private void MainButtonClick(GameObject go)
     {
-        Debug.Log("开始");
+        Debug.Log("返回主界面");
+        SceneManager.LoadScene("Start");
+    }
+
+    private void AgainButtonClick(GameObject go)
+    {
+        Debug.Log("重新开始游戏");
+        Application.LoadLevel(2);
         Time.timeScale = 1;
-        m_SuspendPanel.SetActive(false);
-        m_GamePanel.SetActive(true);
     }
 
     private void SetOverPanelInfo()

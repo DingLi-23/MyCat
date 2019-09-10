@@ -30,8 +30,8 @@ public class BFireMove : MonoBehaviour
     void Move1()
     {
         float step = speed * Time.deltaTime;
-        gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector2(0, 3), step);
-        if (gameObject.transform.position == new Vector3(0, 3,0))
+        gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector2(4, 2), step);
+        if (gameObject.transform.position == new Vector3(4, 2, 0))
         {
             isRotate = false;
         }
