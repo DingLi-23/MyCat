@@ -15,6 +15,9 @@ public class GameUIManager : MonoBehaviour
 
     private GameObject button_Reset;
 
+    //OverpaneInfo.
+    private UILabel DiamondsNu;  
+
     void Start()
     {
         m_GamePanel = GameObject.Find("GamePanel");
@@ -22,6 +25,8 @@ public class GameUIManager : MonoBehaviour
 
         label_Score = GameObject.Find("DiamondsNum1").GetComponent<UILabel>();
         label_Score.text = "0";
+
+        DiamondsNu = GameObject.Find("Diamonds2/DiamondsNum2").GetComponent<UILabel>();
 
         button_Reset = GameObject.Find("Reset");
         UIEventListener.Get(button_Reset).onClick = ResetButtonClick;
@@ -41,11 +46,21 @@ public class GameUIManager : MonoBehaviour
     {
         m_OverPanel.SetActive(true);
         m_GamePanel.SetActive(false);
+        SetOverPanelInfo();
 
     }
 
     private void ResetButtonClick(GameObject go)
     {
         SceneManager.LoadScene("Start");
+    }
+
+    private void SetOverPanelInfo()
+    {
+        int a = int.Parse(label_Score.text);
+        DiamondsNu.text = "+" + a;
+
+        //存储钻石.
+        PlayerPrefs.SetInt("MasonryCount", a);
     }
 }
