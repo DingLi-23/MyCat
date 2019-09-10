@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class endforcamera : MonoBehaviour
 {
-    public GameObject c;
     public GameObject Endc;
     void Start()
     {

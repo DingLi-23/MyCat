@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Endc : MonoBehaviour
 {
-    public GameObject MainCamera;
     public int a = 1;
 
     // Start is called before the first frame update

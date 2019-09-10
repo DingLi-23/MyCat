@@ -71,5 +71,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   batdead: 0
-  catBounForce_x: 120
-  catBounForce_y: 120
+  catBounForce_x: 15
+  catBounForce_y: 5

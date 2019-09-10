@@ -37,6 +37,14 @@ public class CameraMove : MonoBehaviour
             m_Transform.position = Vector3.Lerp(m_Transform.position, nextPos, Time.deltaTime * 5.5f);
         }
 
+        if (cat_Transform.position.y < -15)
+        {
+            Vector3 nextPos = new Vector3(cat_Transform.position.x + 2, -15, cat_Transform.position.z - 10);
+        }
+        if (cat_Transform.position.y < -5)
+        {
+            Vector3 nextPos = new Vector3(this.GetComponent<Transform>().position.x, -5, cat_Transform.position.z - 10);
+        }
         if (cat_Transform.position.y < -7)
         {
             Vector3 nextPos = new Vector3(this.GetComponent<Transform>().position.x, -6, cat_Transform.position.z - 10);

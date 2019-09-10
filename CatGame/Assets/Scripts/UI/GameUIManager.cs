@@ -31,8 +31,6 @@ public class GameUIManager : MonoBehaviour
 
         label_Score = GameObject.Find("DiamondsNum1").GetComponent<UILabel>();
         label_Score.text = "0";
-
-        DiamondsNu = GameObject.Find("DiamondsNum2").GetComponent<UILabel>();
         DiamondsNu = GameObject.Find("DiamondsNum2").GetComponent<UILabel>();
 
         button_Reset = GameObject.Find("Reset");
@@ -97,4 +95,5 @@ public class GameUIManager : MonoBehaviour
         //存储钻石.
         PlayerPrefs.SetInt("MasonryCount", a);
     }
+
 }
