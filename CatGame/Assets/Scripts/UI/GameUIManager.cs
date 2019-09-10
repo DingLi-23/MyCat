@@ -32,6 +32,8 @@ public class GameUIManager : MonoBehaviour
 
         DiamondsNu = GameObject.Find("DiamondsNum2").GetComponent<UILabel>();
 
+        DiamondsNu = GameObject.Find("Diamonds/DiamondsNum2").GetComponent<UILabel>();
+
         button_Reset = GameObject.Find("Reset");
         UIEventListener.Get(button_Reset).onClick = ResetButtonClick;
         button_Suspend = GameObject.Find("suspend");

@@ -36,21 +36,35 @@ public class CameraMove : MonoBehaviour
 
     void LateUpdate()
     {
-        if (cat_Transform.position.y > 5){
+        if (cat_Transform.position.y > 5)
+        {
             Vector3 nextPos = new Vector3(cat_Transform.position.x + 2, 5, cat_Transform.position.z - 10);
-            m_Transform.position = Vector3.Lerp(m_Transform.position, nextPos,Time.deltaTime * 2);
+            m_Transform.position = Vector3.Lerp(m_Transform.position, nextPos, Time.deltaTime * 5.5f);
         }
-        if (cat_Transform.position.y < -7){
+
+        if (cat_Transform.position.y < -7)
+        {
             Vector3 nextPos = new Vector3(this.GetComponent<Transform>().position.x, -6, cat_Transform.position.z - 10);
             m_Transform.position = Vector3.Lerp(m_Transform.position, nextPos, Time.deltaTime * 2);
             m_GameUIManager.ShowOverPanel();
         }
-        if (cat_Transform.position.y > -7 && cat_Transform.position.y < 5){
-            Vector3 nextPos = new Vector3(cat_Transform.position.x + 2, cat_Transform.position.y, cat_Transform.position.z - 10);
-            m_Transform.position = Vector3.Lerp(m_Transform.position, nextPos, Time.deltaTime);
+        if (cat_Transform.position.y > -7 && cat_Transform.position.y < 5)
+        {
+
+            if (cat_Transform.position.y < -18)
+            {
+                Vector3 nextPos = new Vector3(this.GetComponent<Transform>().position.x, -18, cat_Transform.position.z - 10);
+                m_Transform.position = Vector3.Lerp(m_Transform.position, nextPos, Time.deltaTime * 5.5f);
+                m_GameUIManager.ShowOverPanel();
+            }
+            if (cat_Transform.position.y > -18 && cat_Transform.position.y < 5)
+            {
+
+                Vector3 nextPos = new Vector3(cat_Transform.position.x + 2, cat_Transform.position.y, cat_Transform.position.z - 10);
+                m_Transform.position = Vector3.Lerp(m_Transform.position, nextPos, Time.deltaTime * 5.50f);
+            }
         }
     }
-
     void FixedUpdate ()
     {
         time++;
